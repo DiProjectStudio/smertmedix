@@ -1,0 +1,55 @@
+---
+title: Smartmedix | Проекты
+bodyClass: projects-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Наши проекты', 'Наши проекты')
+
+    section.projects
+        .container
+            .projects__inner
+                .projects__inner-gallery
+                    .gallery-item.general-card
+                        .item-slider
+                            .swiper
+                                .swiper-wrapper
+                                    .general-card__img.swiper-slide(data-src="assets/images/complex-1.jpg", data-fancybox="gallery1")
+                                        +img('complex-1.jpg')
+                                    .general-card__img.swiper-slide(data-src="assets/images/hero-bg.jpg", data-fancybox="gallery1")
+                                        +img('hero-bg.jpg')
+                                    .general-card__img.swiper-slide(data-src="assets/images/partnership-cover.jpg", data-fancybox="gallery1")
+                                        +img('partnership-cover.jpg')
+                        .general-card__name Кабинет рентгена
+                        .general-card__text г. Москва мед учреждение №4
+
+                    .gallery-item.general-card
+                        .item-slider.general-card__img
+                            .swiper
+                                .swiper-wrapper
+                                    .general-card__img.swiper-slide(data-src="assets/images/partnership-cover.jpg", data-fancybox="gallery2")
+                                        +img('partnership-cover.jpg')
+                                    .general-card__img.swiper-slide(data-src="assets/images/hero-bg.jpg", data-fancybox="gallery2")
+                                        +img('hero-bg.jpg')
+                                    .general-card__img.swiper-slide(data-src="assets/images/partnership-cover.jpg", data-fancybox="gallery2")
+                                        +img('partnership-cover.jpg')
+                        .general-card__name Кабинет рентгена
+                        .general-card__text г. Москва мед учреждение №4
+
+                    .gallery-item.general-card
+                        .item-slider.general-card__img
+                            .swiper
+                                .swiper-wrapper
+                                    .general-card__img.swiper-slide(data-src="assets/images/complex-1.jpg", data-fancybox="gallery3")
+                                        +img('complex-1.jpg')
+                                    .general-card__img.swiper-slide(data-src="assets/images/hero-bg.jpg", data-fancybox="gallery3")
+                                        +img('hero-bg.jpg')
+                                    .general-card__img.swiper-slide(data-src="assets/images/partnership-cover.jpg", data-fancybox="gallery3")
+                                        +img('partnership-cover.jpg')
+                        .general-card__name Кабинет рентгена
+                        .general-card__text г. Москва мед учреждение №4
+
+                include components/_pagination

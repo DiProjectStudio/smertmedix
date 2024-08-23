@@ -1,0 +1,59 @@
+---
+title: Smartmedix | Страница каталога
+bodyClass: category-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Категория (каталог)', 'Категории раздела', ['Категория (каталог)'])
+    section.catalog
+        .container
+            .catalog__inner
+                .catalog__inner-filter.filter--main
+                    .filter-button.btn.btn--blue
+                        include assets/images/icon_filter.svg
+                        span Фильтр
+                include ./components/_filter
+                .catalog__inner-filter.filter--secondary
+                    .countries
+                        .countries-head Страна-производитель:
+                        .countries-items
+                            .country Россия
+                            .country Китай
+                            .country США
+                            .country Германия
+                            .country Швейцария
+                            .country Россия
+                            .country Китай
+                            .country США
+                            .country Германия
+                            .country Швейцария
+
+                        .countries-more#showCountries
+                            span Показать еще
+                            +img('icon_arrow-down-blue.svg')
+
+                    .chosen-filters
+                        .chosen-filter#chosenManufacturer Производитель:<span>Amelie</span>
+                        .chosen-filter#chosenCountry Страна-производитель:<span>Швейцария</span>
+                        .chosen-filter.filter-action#resetFilter Сбросить фильтры
+                .catalog__inner-products
+
+                    .products-items
+                        include ./components/_product
+                        include ./components/_product-with-badge
+                        include ./components/_product
+                        include ./components/_product
+                        include ./components/_product-with-badge
+                        include ./components/_product-with-badge
+                        include ./components/_product
+                    include ./components/_pagination
+                .catalog__inner-article
+                    h2 Как выбрать инкубатор
+                    p Чистота помещения уточняется путем количественного анализа частиц, находящихся в воздушной среде. Предельные значения четко фиксируются в соответствующих таблицах. Разработанные классы чистоты учитывают специфику конкретного помещения, его задачи.Чистота помещения уточняется путем количественного анализа частиц, находящихся в воздушной среде. Предельные значения четко фиксируются в соответствующих таблицах. Разработанные классы чистоты учитывают специфику конкретного помещения, его задачи.Чистота помещения уточняется путем количественного анализа частиц, находящихся в воздушной среде. Предельные значения четко фиксируются в соответствующих таблицах. Разработанные классы чистоты учитывают специфику конкретного помещения, его задачи.
+                    a(href='javascript:void(0)').link.link--blue-underlined подробнее
+
+
+

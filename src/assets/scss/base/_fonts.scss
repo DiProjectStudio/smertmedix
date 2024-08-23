@@ -1,0 +1,15 @@
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --logo-family: 'Prosto One', sans-serif;
+}
+
+$mainFont: var(--font-family);
+$logoFont: var(--logo-family);
+
+body {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $black;
+}

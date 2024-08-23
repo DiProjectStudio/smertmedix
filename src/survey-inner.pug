@@ -1,0 +1,56 @@
+---
+title: Smartmedix | Обзоры детальная
+bodyClass: survey-inner-page
+---
+
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Новости, статьи, обзоры','Обзоры',['Наименование обзора'])
+
+    section.company-services.service-page.news-page
+        .container
+            .company-services__inner
+
+                .general-card
+                    .section-head
+                        h1.title Наименование обзора
+                    .general-card__img
+                        .icon-play(data-src="../assets/images/service-4.jpg" data-fancybox)
+                            +img('icon_play.svg')
+                        +img('service-4.jpg')
+                    .general-card__text
+                        p Чистыми помещениями называют те из них, в которых содержание пыли или патогенных микроорганизмов в воздушной среде поддерживается в определенном диапазоне, регламентированном соответствующими нормативами.
+                        p Чистыми помещениями называют те из них, в которых содержание пыли или патогенных микроорганизмов в воздушной среде поддерживается в определенном диапазоне, регламентированном соответствующими нормативами.
+                        p Чистыми помещениями называют те из них, в которых содержание пыли или патогенных микроорганизмов в воздушной среде поддерживается в определенном диапазоне, регламентированном соответствующими нормативами.
+                        p Чистыми помещениями называют те из них, в которых содержание пыли или патогенных микроорганизмов в воздушной среде поддерживается в определенном диапазоне, регламентированном соответствующими нормативами.
+                    .general-card__action
+                        a(href='javascript:void(0)').btn.btn--blue-bordered
+                            span Следующий обзор
+                            include assets/images/icon_arrow-down.svg
+
+    section.related-products.products-slider
+        .container
+            .related-products__inner
+                .products-slider__inner-head.section-head
+                    h2.title Связанные товары
+                .products-slider__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                        include ./components/_swiper-nav

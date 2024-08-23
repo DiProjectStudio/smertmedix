@@ -1,0 +1,209 @@
+.footer {
+  //margin-top: auto;
+  padding: 64px 0 32px;
+  background-color: $blue-light-1;
+
+  @include breakpoint(lg) {
+    padding: 96px 0 48px;
+  }
+
+  .footer__inner {
+    .footer__content {
+
+      @include breakpoint(md) {
+        grid-gap: 64px 45px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @include breakpoint(lg) {
+        column-gap: 38px;
+        justify-content: space-between;
+      }
+
+    }
+
+
+    .footer__form {
+      display: grid;
+      gap: 24px;
+
+      @include breakpoint(md) {
+        width: calc(100% / 20 * 11);
+      }
+
+      @include breakpoint(lg) {
+        width: calc(100% / 20 * 5 - 15px);
+        order: 1;
+      }
+
+      @include breakpoint(hd) {
+        width: 385px;
+      }
+
+      .footer__logo {
+        width: 208px;
+
+        @include breakpoint(xl) {
+          width: 223px;
+        }
+      }
+
+      .form-subtitle {
+        font-size: 20px;
+        line-height: 120%;
+      }
+
+      form {
+
+
+      }
+    }
+
+    .footer__nav-block {
+
+      &.contacts {
+        @include breakpoint(md) {
+          width: 38%;
+        }
+
+        @include breakpoint(lg) {
+          order: 4;
+          width: 300px;
+        }
+
+        .nav-block__list {
+          .nav-list__item {
+            &:first-child, &:nth-child(2) {
+              font-weight: 600;
+            }
+
+            &.messangers {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 12px;
+
+              .link {
+                justify-content: center;
+
+                img {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @include breakpointMax(md) {
+        &.contacts, &.customers {
+          margin-top: 45px;
+        }
+
+        &.company {
+          margin-top: 64px;
+        }
+      }
+
+      @include breakpoint(md) {
+        &.company, &.customers {
+          width: calc(100% / 20 * 6);
+        }
+      }
+
+      @include breakpoint(lg) {
+
+        &.company {
+          order: 2;
+          margin-left: 40px;
+        }
+        &.customers {
+          order: 3;
+        }
+
+        &.company, &.customers {
+          width: calc(100% / 20 * 4 - 17px);
+        }
+      }
+
+      @include breakpoint(hd) {
+
+        &.company, &.customers, &.contacts {
+          width: 304px;
+        }
+      }
+
+      .nav-block__head {
+        font-size: 20px;
+        padding: 0 0 12px 2px;
+        border-bottom: 1px solid $gray-1;
+      }
+
+      .nav-block__list {
+
+        margin-top: 12px;
+
+        @include breakpoint(lg) {
+          margin-top: 24px;
+        }
+
+        .nav-list__item ~ .nav-list__item {
+          margin-top: 6px;
+        }
+
+        .nav-list__item {
+          padding: 10px 6px;
+          @include titleGeneral;
+        }
+      }
+    }
+
+
+    .footer__bottom {
+      display: grid;
+      gap: 12px;
+      width: 100%;
+      @include titleGeneral;
+      margin-top: 32px;
+
+
+      @include breakpointMax(md) {
+
+        justify-content: center;
+      }
+
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+      }
+
+      div {
+        padding: 6px 0;
+
+      }
+
+      .link {
+
+        @include breakpointMax(md) {
+          justify-content: center;
+        }
+
+      }
+
+      a {
+        color: $gray-1;
+
+
+        span {
+          color: $black;
+        }
+      }
+
+      .footer__devs {
+        @include flexCenterCenter;
+        gap: 5px;
+      }
+    }
+
+  }
+}

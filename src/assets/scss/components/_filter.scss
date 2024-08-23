@@ -1,0 +1,218 @@
+.filter-content {
+  @include flexColumn;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+
+  @include breakpoint(md) {
+    width: 334px;
+  }
+
+  @include breakpoint(lg) {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: unset;
+  }
+  padding: 24px 10px;
+
+  @include breakpoint(md) {
+    padding: 24px;
+  }
+
+  @include breakpointMax(lg) {
+    overflow-y: auto;
+    z-index: 100;
+    background-color: $white;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    left: -100%;
+    transition: visibility 0s ease 0.3s, opacity 0.5s ease, left 1s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+      transition: visibility 0s linear 0s, opacity 0.3s linear, left 0.5s ease;
+    }
+  }
+  @include breakpoint(lg) {
+    padding: 0;
+  }
+
+  .filter-close {
+    align-self: flex-end;
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    @include flexCenterCenter;
+
+    &.btn {
+      padding: 4px;
+      border-radius: 6px;
+    }
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray-3 !important;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $blue-primary !important;
+    border-radius: 5px;
+  }
+
+  .filter-content-head {
+    @include titleGeneral;
+    @include flexAlignCenter;
+    gap: 8px;
+    color: $blue-primary;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+
+    svg {
+      path {
+        stroke: $blue-primary;
+      }
+    }
+  }
+
+
+  .filter-items {
+    .filter-item ~ .filter-item {
+      margin-top: 20px;
+    }
+
+    .filter-item {
+      @include flexColumn;
+
+      @include breakpointMax(lg) {
+        padding-right: 10px;
+      }
+
+
+      .filter-head {
+        @include flexCenterBetween;
+        cursor: pointer;
+        padding: 12px 0;
+        margin-right: -10px;
+
+        span {
+          @include titleGeneral;
+          font-size: 20px;
+        }
+
+
+        .icon {
+          transition: $transition-style;
+          @include flexCenterCenter;
+          width: 24px;
+          height: 24px;
+          transform: rotate(90deg);
+
+          svg path {
+            stroke: $black;
+          }
+        }
+      }
+
+
+      &.expanded {
+        .icon {
+          transition: $transition-style;
+          transform: rotate(-90deg);
+        }
+
+        .filter-options {
+          display: flex;
+        }
+      }
+
+
+    }
+
+    .filter-options {
+      display: none;
+      overflow-y: auto;
+      margin-top: 10px;
+      max-height: 436px;
+      flex-direction: column;
+      width: 100%;
+
+      .filter-option {
+
+        padding: 8px 0;
+
+        font-size: 14px;
+        @include titleGeneral;
+
+        label {
+          @include flexAlignCenter;
+          justify-content: flex-start;
+          gap: 8px;
+        }
+      }
+
+      .filter-option ~ .filter-option {
+        margin-top: 4px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $gray-3 !important;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $blue-primary !important;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .filter-actions {
+    width: 100%;
+    display: flex;
+    padding: 12px 0;
+
+    @include breakpointMax(lg) {
+      justify-content: center;
+    }
+    gap: 8px;
+  }
+
+}
+
+.checkbox-style label span {
+  font-size: 14px;
+  color: $gray-1;
+  font-weight: 500;
+  margin-left: -5px;
+
+  @include breakpoint(xl) {
+    //font-size: 14px;
+  }
+}
+
+//.bx-filter-section.container-fluid {
+//  padding: 0;
+//
+//  .smartfilter .row {
+//    margin: 0;
+//  }
+//}

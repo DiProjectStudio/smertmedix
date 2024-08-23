@@ -1,0 +1,853 @@
+.header {
+  z-index: 15;
+  position: sticky;
+  top: 0;
+  padding: 12px 0 3px;
+  background-color: $white;
+
+  .header__inner {
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr repeat(2, auto);
+    gap: 10px;
+
+    @include breakpoint(md) {
+      gap: 12px 24px;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+    }
+
+    .header__logo {
+      width: 140px;
+      grid-column: 1/2;
+
+      @include breakpoint(md) {
+        width: 161px;
+      }
+      @include breakpoint(lg) {
+        width: 208px;
+        grid-row: 2/3;
+      }
+      @include breakpoint(hd) {
+        width: 224px;
+      }
+    }
+
+
+    .header__contacts {
+      grid-column: 2/3;
+
+      @include breakpoint(lg) {
+        grid-column: 3/4;
+
+        @include flexAlignCenter;
+        gap: 4px;
+      }
+
+      .contacts-item {
+        @include titleGeneral;
+        padding: 6px;
+        @include breakpointMax(md) {
+          font-size: 12px;
+        }
+
+        @include breakpoint(md) {
+          padding: 6px 12px;
+        }
+        @include breakpoint(lg) {
+          padding: 12px 24px;
+        }
+
+        &.item--email {
+          @include breakpointMax(lg) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .header__burger {
+      width: 32px;
+      height: 32px;
+
+      grid-column: 3/4;
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    .header__bottom {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+
+      @include breakpoint(md) {
+        grid-template-columns: auto 1fr auto;
+      }
+
+      @include breakpoint(lg) {
+        grid-column: 2/4;
+      }
+
+      .header__catalog {
+
+        @include breakpoint(md) {
+          height: 100%;
+        }
+
+        .catalog-btn {
+          padding: 12px 8px;
+          @include breakpoint(md) {
+            height: 100%;
+          }
+        }
+
+        .icon {
+          transition: $transition-style;
+        }
+
+        &.active {
+
+          .icon{
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      .header__actions {
+        @include flexAlignCenter;
+        gap: 8px;
+
+
+        @include breakpoint(md) {
+          gap: 12px;
+        }
+
+        @include breakpoint(lg) {
+          display: none;
+        }
+
+        .action-item {
+
+          @include flexColumn;
+          align-items: center;
+          gap: 4px;
+          cursor: pointer;
+
+          .icon {
+            width: 24px;
+            height: 24px;
+
+            svg path {
+              transition: $transition-style;
+            }
+          }
+
+          span {
+            color: $gray-1;
+            font-weight: 500;
+            transition: $transition-style;
+            @include breakpointMax(md) {
+              font-size: 14px;
+            }
+          }
+
+          &:hover {
+            span {
+              color: $blue-primary;
+            }
+
+            .icon {
+              svg path {
+                stroke: $blue-primary;
+              }
+            }
+
+          }
+
+          &.active {
+
+            &.action--compare {
+              .icon {
+
+                position: relative;
+
+                &::after {
+                  position: absolute;
+                  content: '';
+                  top: calc(50% - 4px);
+                  left: calc(50% - 4px);
+                  width: 8px;
+                  height: 8px;
+                  border: 1px solid $white;
+                  background-color: $red;
+                  border-radius: 50%;
+                }
+
+                svg path {
+                  stroke: $blue-primary;
+                }
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .header__search {
+        grid-column: span 2;
+        @include breakpoint(md) {
+          grid-column: 2/3;
+          grid-row: 1/2;
+
+        }
+
+        .header__search-input {
+          position: relative;
+
+          .icon {
+            position: absolute;
+            top: calc(50% - 18px);
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            padding: 6px;
+            border-radius: 5px;
+            @include flexCenterCenter;
+            background-color: transparent;
+            transition: $transition-style;
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+
+            &.focused {
+              background-color: $gray-2;
+              box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.10);
+            }
+          }
+
+          form {
+            margin-bottom: 0;
+          }
+
+
+        }
+      }
+    }
+
+  }
+
+
+}
+
+.header__menu, .header__catalog-categories, .header__catalog-products {
+  &.active {
+    .header-wrapper {
+      left: 0;
+    }
+  }
+
+}
+
+.header__bg {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, .5);
+  opacity: 0;
+  animation: fadeOut ease-out .2s forwards;
+  z-index: 10;
+
+  @include breakpoint(lg) {
+    top: 129px;
+    z-index: 1;
+  }
+}
+
+.wrapper {
+  @include breakpoint(lg) {
+    //z-index: 99;
+    width: fit-content;
+  }
+}
+
+.common-wrapper {
+
+  overflow-y: auto;
+  max-height: calc(100vh - 170px);
+
+  @include breakpointMax(lg) {
+    position: absolute;
+  }
+
+  .header__catalog-categories {
+
+    @include breakpoint(lg) {
+      position: relative;
+      z-index: 2;
+
+      .header-wrapper {
+        width: 100%;
+      }
+
+      .header__menu-nav {
+        width: 100%;
+      }
+    }
+
+    .menu-nav__categories {
+      padding: 12px 10px;
+      border-radius: 10px;
+      background-color: $white;
+      margin-right: 12px;
+
+      @include breakpoint(lg) {
+        padding: 0;
+        margin-right: 0;
+      }
+
+      .menu-nav__list {
+        flex-direction: column;
+        align-items: unset;
+        padding: 0;
+
+      }
+
+      .list-item {
+        padding: 15px 0;
+        @include flexCenterBetween;
+        gap: 8px;
+        cursor: pointer;
+
+        @include breakpoint(lg) {
+          padding: 8px 16px 8px 24px;
+        }
+
+        &::after {
+          width: 16px;
+          height: 16px;
+          display: block;
+          content: '';
+          background-image: url("../images/icon_arrow-down-blue.svg");
+          @include backgroundParams;
+          transform: rotate(-90deg);
+          transition: $transition-style;
+          z-index: 0;
+
+          @include breakpoint(md) {
+            transform: rotate(0);
+          }
+        }
+
+
+
+        &.active {
+
+          .link {
+            color: $blue-primary;
+          }
+
+          svg path {
+            stroke: $blue-primary;
+          }
+
+          &::after {
+
+            @include breakpoint(md) {
+              transform: rotate(-90deg);
+            }
+
+          }
+        }
+
+        &:hover {
+          svg path {
+            stroke: $blue-primary;
+          }
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: $transition-style;
+        }
+
+        span {
+          @include titleGeneral;
+          @include breakpointMax(md) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+    position: absolute;
+    top: 100%;
+    width: fit-content;
+    left: -150%;
+    transition: all .6s ease-out;
+    border-radius: 0 0 20px 20px;
+    background: $white;
+
+
+    .header__catalog-products {
+      .header-wrapper {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 12px 10px;
+
+  @include breakpoint(md) {
+    width: 438px;
+    padding: 20px;
+  }
+
+  @include breakpointMax(lg) {
+    overflow-y: auto;
+    flex-direction: column;
+    z-index: 25;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    transition: all .7s ease;
+    background-color: #F7F7F7;
+  }
+  @include breakpoint(lg) {
+    padding: 0;
+  }
+
+  &.header__menu-wrapper {
+    @include breakpoint(lg) {
+      order: 1;
+      width: 100%;
+      @include flexCenterBetween;
+      padding: 0;
+    }
+
+
+    .menu-nav__catalog {
+      order: 2;
+      @include breakpointMax(lg) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &.header__categories-wrapper, &.header__products-wrapper {
+    gap: 20px;
+
+    .header__menu-title {
+      font-weight: 600;
+      line-height: 140%;
+      color: $blue-primary;
+      padding: 12px;
+      min-height: 48px;
+      @include flexAlignCenter;
+
+      @include breakpointMax(md) {
+        border-bottom: 1px solid $gray-2;
+      }
+
+      @include breakpoint(md) {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 2px 12px;
+
+      }
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    .menu-nav__catalog {
+      order: 3;
+    }
+
+
+  }
+
+  &.header__categories-wrapper {
+
+    &.active {
+      .header__menu-content.content-catalog {
+        @include breakpoint(md) {
+          display: grid;
+          grid-template-columns: 60% 40%;
+          margin-right: 0;
+          padding-right: 10px;
+        }
+        @include breakpoint(lg) {
+          grid-template-columns: auto 365px;
+          height: 636px;
+          overflow-y: auto;
+        }
+      }
+
+      .header__menu-content.content-products {
+        display: block;
+        overflow-y: unset;
+        margin-top: 0;
+
+        @include breakpointMax(lg) {
+          background-color: $blue-light-1;
+        }
+
+        .menu-nav__list {
+          margin-top: 4px;
+
+          @include breakpoint(lg) {
+            margin-top: 0;
+          }
+
+          .list-item ~ .list-item {
+            margin-top: 4px;
+          }
+
+          .list-item {
+            padding: 12px;
+            @include titleGeneral;
+            background-color: $white;
+            border-radius: 10px;
+            cursor: pointer;
+
+            @include breakpoint(lg) {
+              padding: 12px 24px;
+            }
+          }
+        }
+      }
+
+      .header__menu-nav.menu-nav__products {
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+        height: fit-content;
+
+        position: sticky;
+        top: 0;
+
+        @include breakpoint(lg) {
+          padding: 0;
+        }
+      }
+
+      @include breakpoint(md) {
+        width: 100%;
+
+        .menu-nav__categories {
+          margin-right: 0;
+          border-radius: 10px 0 0 10px;
+        }
+      }
+    }
+
+  }
+
+  &.header__products-wrapper {
+
+    background-color: $blue-light-1;
+
+    .content-products {
+      padding: 12px;
+      border-radius: 10px;
+      background-color: $white;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    .list-item {
+      padding: 12px;
+    }
+
+  }
+
+  .header__menu-actions {
+    order: 1;
+    @include flexCenterBetween;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+
+    .menu-action {
+      width: 32px;
+      height: 32px;
+      @include flexCenterCenter;
+
+      &.btn {
+        padding: unset;
+        border-radius: 6px;
+      }
+    }
+
+    .header__menu-close {
+      margin-left: auto;
+    }
+
+    .header__menu-back {
+      svg {
+        height: 10px;
+      }
+    }
+  }
+
+  .header__menu-content {
+    order: 2;
+
+
+    @include breakpointMax(lg) {
+      overflow-y: auto;
+      margin-top: 12px;
+    }
+
+    @include breakpoint(lg) {
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 100%;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $gray-2;
+      border-radius: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue-primary;
+      border-radius: 1px;
+    }
+  }
+
+  .header__menu-content.content-catalog {
+
+    @include breakpoint(lg) {
+      padding-top: 12px;
+    }
+  }
+
+
+}
+
+.header__menu {
+  @include breakpoint(lg) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+
+  .header__menu-actions, .header__menu-contacts {
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  .header__menu-nav {
+
+    @include breakpointMax(lg) {
+      order: 2;
+      background-color: $white;
+      padding: 12px;
+      border-radius: 10px;
+      transition: $transition-style;
+    }
+
+    .menu-nav__list {
+
+      @include breakpoint(lg) {
+        @include flexCenterBetween;
+      }
+
+      .list-item {
+
+        @include breakpoint(lg) {
+          font-size: 14px;
+        }
+
+        @include breakpoint(hd) {
+          font-size: 16px;
+        }
+
+
+        .nav-block__head {
+          @include titleGeneral;
+          cursor: pointer;
+          padding: 12px;
+
+          @include breakpointMax(lg) {
+            border-bottom: 1px solid $gray-2;
+            font-weight: 600;
+          }
+        }
+
+        &:nth-child(2) {
+          @include breakpoint(lg) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          span {
+            .link {
+              color: $blue-primary;
+            }
+          }
+        }
+
+
+        &.nav-block {
+
+          @include breakpoint(lg) {
+            position: relative;
+            padding-right: 8px;
+          }
+
+          .nav-block__head {
+            padding: 12px;
+            @include flexCenterBetween;
+            transition: $transition-style;
+
+
+            svg {
+
+              @include breakpoint(lg) {
+                path {
+                  stroke: $black;
+                }
+              }
+              width: 16px;
+              height: 16px;
+              transition: $transition-style;
+            }
+
+            @include breakpoint(lg) {
+              gap: 8px;
+            }
+          }
+
+
+          .nav-block__list {
+            display: none;
+
+
+            @include breakpoint(lg) {
+              position: absolute;
+              top: calc(100% + 6px);
+              border: 1px solid $gray-1;
+              border-radius: 10px;
+              background: $white;
+              width: max-content;
+              padding: 12px;
+              z-index: 6;
+            }
+
+            .nav-list__item {
+              @include breakpointMax(lg) {
+                padding: 12px;
+                border-bottom: 1px solid $gray-2;
+                font-weight: 500;
+              }
+            }
+
+            .nav-list__item ~ .nav-list__item {
+              @include breakpoint(lg) {
+                margin-top: 12px;
+              }
+            }
+
+            a {
+              @include breakpoint(lg) {
+                padding: 12px;
+              }
+            }
+          }
+
+          &.expanded {
+            .nav-block__head {
+              color: $blue-primary;
+
+              svg {
+                transform: rotate(-180deg);
+
+                @include breakpoint(lg) {
+                  path {
+                    stroke: $blue-primary;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+
+      }
+    }
+
+  }
+
+  .header__menu-contacts {
+    order: 3;
+    margin-top: 12px;
+    transition: $transition-style;
+
+    .menu-contact ~ .menu-contact {
+      margin-top: 6px;
+    }
+
+    .menu-contact {
+      @include flexAlignCenter;
+      gap: 12px;
+      padding: 12px;
+      background-color: $white;
+      border-radius: 10px;
+      font-weight: 600;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+
+    }
+  }
+}
+
+
+// ANIMATIONS
+@keyframes fadeOut {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}

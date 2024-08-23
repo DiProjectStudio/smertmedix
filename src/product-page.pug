@@ -1,0 +1,262 @@
+---
+title: Smartmedix | Страница товара
+bodyClass: product-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Категория (каталог)', 'Категории раздела', ['Страница товара'])
+
+    section.product-page
+
+        .container
+            .product-page__inner
+                .product-page__head
+                    h1.title Инкубатор AMELIE STAR
+                    .part-number Артикул: <span>12313</span>
+                .product-page__slider
+                    .swiper.gallery-thumbs
+                        .swiper-wrapper
+                            .swiper-slide
+                                .gallery-thumbs-image
+                                    +img('equip-1.png')
+                            .swiper-slide
+                                .gallery-thumbs-image
+                                    +img('equip-1.png')
+                            .swiper-slide
+                                .gallery-thumbs-image
+                                    +img('equip-1.png')
+                            .swiper-slide
+                                .gallery-thumbs-image
+                                    +img('equip-1.png')
+                            .swiper-slide
+                                .gallery-thumbs-image
+                                    +img('equip-1.png')
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include ./assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include ./assets/images/icon_arrow-right.svg
+
+                    .swiper.main-slider
+                        .swiper-wrapper
+                            // первый слайд должен быть с бэйджами
+                            .swiper-slide
+                                .product(data-src="../assets/images/equip-1.png" data-fancybox="gallery-1")
+                                    .product-image
+                                        include ./components/_product-badges
+                                        .image-wrapper
+                                            +img('equip-1.png')
+                            .swiper-slide
+                                .product(data-src="../assets/images/equip-1.png" data-fancybox="gallery-1")
+                                    .product-image
+                                        .image-wrapper
+                                            +img('equip-1.png')
+                            .swiper-slide
+                                .product(data-src="../assets/images/equip-1.png" data-fancybox="gallery-1")
+                                    .product-image
+                                        .image-wrapper
+                                            +img('equip-1.png')
+                            .swiper-slide
+                                .product(data-src="../assets/images/equip-1.png" data-fancybox="gallery-1")
+                                    .product-image
+                                        .image-wrapper
+                                            +img('equip-1.png')
+                            .swiper-slide
+                                .product(data-src="../assets/images/equip-1.png" data-fancybox="gallery-1")
+                                    .product-image
+                                        .image-wrapper
+                                            +img('equip-1.png')
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include ./assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include ./assets/images/icon_arrow-right.svg
+
+
+
+                .product-page__product-info
+                    .info-type Инкубатор интенсивной терапии
+                    .info-country Страна-производитель: <span>Швейцария</span>
+                    .info-brand
+                        span Бренд-производитель
+                        .brand-img
+                            .wrapper
+                                +img('brand-1.png')
+                    .info-actions
+                        .info-action.action-share
+                            .icon
+                                include ./assets/images/export.svg
+                            span.text Поделиться
+
+                        .info-action.action-compare
+                            .icon
+                                include ./assets/images/ranking.svg
+                            span.text Сравнить
+                        .info-action-alert
+                            .wrapper
+                                .icon
+                                    +img('icon_check-white.svg')
+                                span
+                    .info-buttons
+                        button.btn.btn--blue(type="button" data-src="#popup-request" data-fancybox) Задать вопрос
+                        button.btn.btn--blue-bordered(type="button" data-src="#popup-offer" data-fancybox) Запросить КП
+                    .info-options
+                        .option
+                            .option-img
+                                +img('delivery.svg')
+                            .option-text Доставка по всей России
+                        .option
+                            .option-img
+                                +img('shield-tick.svg')
+                            .option-text Гарантия 12 месяцев
+                        .option
+                            .option-img
+                                +img('data.svg')
+                            .option-text Установка и обучение
+
+                    .info-desc
+                        .title Коротко о товаре:
+                        p Современные технологии, представленные в максимально удобной форме. Amelie сконструирован специальным образом, чтобы свести к минимуму время его очистки и дезинфекции, чему способствуют легкость разборки инкубатора, доступность всех компонентов и гладкие поверхности.
+                    .info-purpose
+                        .title Направления:
+
+                        ul
+                            li реанимации новорожденных
+                            li палаты интенсивной терапии
+                            li отделениях патологии новорожденных
+                            li отделениях неотложной и лечебной педиатрии
+                            li родильных домах
+                    .info-doc
+                        a(href='javascript:void(0)' download target="_blank").link.link--blue-underlined Скачать буклет
+
+                .product-page__product-details
+                    .details-block
+                        .detail-tabs
+                            a(href='javascript:void(0)').detail-tab.active Описание
+                            a(href='javascript:void(0)').detail-tab Характеристики
+                            a(href='javascript:void(0)').detail-tab Принадлежности
+                            a(href='javascript:void(0)').detail-tab Обзор
+
+                    .details-content.description.active
+                        .content__inner
+                            p Надежность и безопасность — «сделано в Швейцарии». Надежность и безопасность выпускаемого оборудования всегда находятся на первом месте при разработке и производстве в Швейцарии
+                            ul
+                                li 10 портов для проведения трубок и кабелей сделаны из прочного, устойчивого к ультрафиолетовому излучению, стерилизуемого высокотехнологичного силикона
+                                li Наилучший материал для матрасика, а именно дышащий и гигиеничный Дартекс®
+                                li Интеллектуальные системы мониторинга и контроля
+                                li Интеллектуальные системы мониторинга и контроля
+                                li Интеллектуальные системы мониторинга и контроля
+                                li Интеллектуальные системы мониторинга и контроля
+                                li Интеллектуальные системы мониторинга и контроля
+                                li Интеллектуальные системы мониторинга и контроля
+
+                        .content-show-more.link.link--blue-underlined подробнее
+
+                    .details-content.characteristics
+                        .content__inner
+                            .characteristic
+                                .characteristic-name Cистема тревог
+                                .dots
+                                .characteristic-value Совершенная система тревог
+                            .characteristic
+                                .characteristic-name Высота
+                                .dots
+                                .characteristic-value 220 cм
+                            .characteristic
+                                .characteristic-name Разворот
+                                .dots
+                                .characteristic-value Левая, прямоугольная
+                            .characteristic
+                                .characteristic-name Наличие крышки
+                                .dots
+                                .characteristic-value Есть крышка
+
+
+
+                    .details-content.accessories
+                        .content__inner
+                            .detail-item
+                                .detail-item-image
+                                    +img('accessory.png')
+                                .detail-item-text
+                                    .text-name Наименование аксессуара
+                                    .text-desc Описание аксессуара
+                            .detail-item
+                                .detail-item-image
+                                    +img('accessory.png')
+                                .detail-item-text
+                                    .text-name Наименование аксессуара
+                                    .text-desc Описание аксессуара
+                            .detail-item
+                                .detail-item-image
+                                    +img('accessory.png')
+                                .detail-item-text
+                                    .text-name Наименование аксессуара
+                                    .text-desc Описание аксессуара
+                        .content-show-more.link.link--blue-underlined подробнее
+
+
+                    .details-content.review
+                        .content__inner
+                            .detail-item
+                                .detail-item-image
+                                    +img('x-ray.jpg')
+                                .detail-item-text
+                                    .text-name Технология ApliPureTM+
+                                    .text-desc Технология ApliPureTM+ объединяет в себе преимущества функций пространственного и частотного совмещения. Позволяет получать изображения с высокой четкостью и детализацией с сохранением всех клинически значимых маркеров-артефактов.
+                            .detail-item
+                                .detail-item-image
+                                    +img('x-ray.jpg')
+                                .detail-item-text
+                                    .text-name Технология ApliPureTM+
+                                    .text-desc Технология ApliPureTM+ объединяет в себе преимущества функций пространственного и частотного совмещения. Позволяет получать изображения с высокой четкостью и детализацией с сохранением всех клинически значимых маркеров-артефактов.
+
+
+                            .detail-item
+                                .detail-item-image
+                                    +img('x-ray.jpg')
+                                .detail-item-text
+                                    .text-name Технология ApliPureTM+
+                                    .text-desc Технология ApliPureTM+ объединяет в себе преимущества функций пространственного и частотного совмещения. Позволяет получать изображения с высокой четкостью и детализацией с сохранением всех клинически значимых маркеров-артефактов.
+                            .detail-item
+                                .detail-item-image
+                                    +img('x-ray.jpg')
+                                .detail-item-text
+                                    .text-name Технология ApliPureTM+
+                                    .text-desc Технология ApliPureTM+ объединяет в себе преимущества функций пространственного и частотного совмещения. Позволяет получать изображения с высокой четкостью и детализацией с сохранением всех клинически значимых маркеров-артефактов.
+
+
+
+                        .content-show-more.link.link--blue-underlined подробнее
+    section.recently-seen-products.products-slider
+        .container
+            .recently-seen-products__inner
+                .products-slider__inner-head.section-head
+                    h2.title Вы недавно смотрели
+                .products-slider__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                        include ./components/_swiper-nav

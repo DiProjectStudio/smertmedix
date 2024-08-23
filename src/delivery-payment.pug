@@ -1,0 +1,61 @@
+---
+title: Smartmedix | Доставка и оплата
+bodyClass: delivery-pay-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Доставка и оплата', 'Доставка и оплата')
+    section.terms.delivery-pay-page
+        .container
+            .terms__inner
+                .terms__inner-delivery.terms-block
+                    .terms-heading Доставка
+                    .terms-content
+                        .terms-content__items
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('timer.svg')
+                                .item-title Быстрая отгрузка
+                                .item-text Доставка оборудования осуществляется надежными транспортными компаниями с соблюдением всех необходимы требований производителя при транспортировке.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('share.svg')
+                                .item-title Большой опыт
+                                .item-text Доставка оборудования осуществляется надежными транспортными компаниями с соблюдением всех необходимы требований производителя при транспортировке.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('verify.svg')
+                                .item-title Всё включено
+                                .item-text Такелажные работы, доставка и монтаж включены в стоимость.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('delivery.svg')
+                                .item-title Любые виды перевозок
+                                .item-text Доставка оборудования осуществляется надежными транспортными компаниями с соблюдением всех необходимы требований производителя при транспортировке.
+                .terms__inner-payment.terms-block
+                    .terms-heading Оплата
+                    .terms-content
+                        .payment-switch
+                            .switch-item.active Лизинг
+                            .switch-item Рассрочка
+                            .switch-item Trade-in
+
+                        .terms-content__items
+                            .terms-content__item.icon-text-item.active
+                                .item-icon
+                                    +img('leasing.svg')
+                                .item-title Лизинг
+                                .item-text Финансовая аренда с правом выкупа оборудования и сохранением денежных средств в обороте компании.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('installment.svg')
+                                .item-title Рассрочка
+                                .item-text Приобретение оборудования с возможностью оплаты равными частями на срок от 3 до 6 месяцев.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('refresh-1.svg')
+                                .item-title Trade-in
+                                .item-text Приобретение нового оборудования взамен старому, распространяется не на все категории аппаратов.

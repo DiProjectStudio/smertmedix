@@ -1,0 +1,12 @@
+<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.8719 19.4637H21.0212C21.4899 19.4637 21.8696 19.0208 21.8696 18.474V13.1732C21.8696 9.81172 20.7014 6.76842 18.8134 4.56537C16.9249 2.36281 14.3162 1 11.4348 1C5.6719 1 1 6.45023 1 13.1732V18.474C1 19.0208 1.37964 19.4637 1.84836 19.4637H8.28314" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.5861 19.4629H16.0065" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.4869 18.9034C16.5402 17.6277 17.9384 15.1049 17.9384 12.2012C17.9384 8.01089 15.0264 4.61328 11.434 4.61328C7.84167 4.61328 4.92969 8.01089 4.92969 12.2012C4.92969 15.0971 6.3204 17.6142 8.36477 18.8931" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.75748 16.4128C7.65394 15.4567 6.9375 13.9244 6.9375 12.2009C6.9375 9.30857 8.95489 6.95508 11.4342 6.95508C13.9135 6.95508 15.9309 9.30857 15.9309 12.2009C15.9309 13.9305 15.2094 15.4676 14.0992 16.423" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.49 22.9188H8.38095C8.06714 22.9188 7.83028 22.5866 7.88746 22.2266L9.03223 15.0195H13.8387L14.9834 22.2266C15.0406 22.5866 14.8038 22.9188 14.49 22.9188Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9.03125 15.02V13.0816C9.03125 12.7582 9.25594 12.4961 9.53314 12.4961H13.3358C13.613 12.4961 13.8377 12.7582 13.8377 13.0816V15.02" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13.4126 24.9994H9.45744C9.22317 24.9994 9.03326 24.7778 9.03326 24.5045V22.918H13.8367V24.5045C13.8367 24.7778 13.6468 24.9994 13.4126 24.9994Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="19.6918" cy="17.0124" rx="0.424178" ry="0.494846" fill="black"/>
+    <ellipse cx="3.17613" cy="17.0124" rx="0.424178" ry="0.494846" fill="black"/>
+    <ellipse cx="17.9357" cy="19.4636" rx="0.424178" ry="0.494846" fill="black"/>
+</svg>

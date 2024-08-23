@@ -1,0 +1,37 @@
+---
+title: Smartmedix | Обзоры
+bodyClass: surveys-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Все обзоры', 'Новости, статьи, обзоры',['Обзоры'])
+
+    section.info
+        .container
+            .info__inner
+                .info__inner-items
+                    a(href='javascript:void(0)').general-card
+                        .general-card__img
+                            +img('cover.jpg')
+                        .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+                    a(href='javascript:void(0)').general-card
+                        .general-card__img
+                            +img('cover.jpg')
+                        .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+                    a(href='javascript:void(0)').general-card
+                        .general-card__img
+                            +img('cover.jpg')
+                        .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                    a(href='javascript:void(0)').general-card
+                        .general-card__img
+                            +img('cover.jpg')
+                        .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+                include components/_pagination

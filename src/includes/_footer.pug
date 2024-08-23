@@ -1,0 +1,80 @@
+block footer
+    include ./_mixins
+
+    footer#footer.footer
+        .container
+            .footer__inner
+
+                .footer__content
+
+
+                    .footer__form
+                        a(href='/').footer__logo.logo
+                            +img('logo.svg')
+                        p.form-subtitle Оставьте заявку и мы вам перезвоним
+                        form
+                            .form-row
+                                input(type="text" name="footer-form_name" placeholder="Ваше имя")
+                            .form-row
+                                input(type="text" name="footer-form_phone" placeholder="+7 (999) 999-99-99")
+                            .form-row
+                                textarea(name="footer-form_email" placeholder="Опишите вашу задачу")
+                            .form-row.form-agreement
+                                .checkbox-style
+                                    input#agreement(type="checkbox" style="display:none" checked)
+                                    label(for="agreement")
+                                p соглашаюсь с <a class="link link--blue-underlined" href="policy.html">политикой конфиденциальности</a>
+                            .form-action
+                                button.btn.btn--blue(type="submit" data-src="#popup-request" data-fancybox) Оставить заявку
+
+
+                    .footer__nav-block.nav-block.contacts
+                        .nav-block__head Контакты
+
+                        ul.nav-block__list
+                            li.nav-list__item
+                                a(href='tel:88008808888').link.link--black 8-800-88-08-888
+                            li.nav-list__item
+                                a(href='mailto:servisinstr@gmail.com').link.link--black servisinstr@gmail.com
+                            li.nav-list__item
+                                a(href='javascript:void(0)').link.link--black 127018, г. Москва, ул. Сущевский Вал, д.5, стр.28
+                            li.nav-list__item.messangers
+                                a(href='https://wa.me/78008808888').link.link--black
+                                    //include ../assets/images/
+                                    +img('icon_whatsapp.svg')
+                                    span WhatsApp
+                                a(href='https://t.me/+78008808888').link.link--black
+                                    +img('icon_telegram.svg')
+                                    span Telegram
+
+                    .footer__nav-block.nav-block.company
+                        .nav-block__head Компания
+                        ul.nav-block__list
+                            li.nav-list__item
+                                a(href='company.html').link.link--black О Smartmedix
+                            li.nav-list__item
+                                a(href='projects.html').link.link--black Наши проекты
+                            li.nav-list__item
+                                a(href='news.html').link.link--black Новости
+
+                    .footer__nav-block.nav-block.customers
+                        .nav-block__head Покупателям
+                        ul.nav-block__list
+                            li.nav-list__item
+                                a(href='catalog.html').link.link--black Каталог
+                            li.nav-list__item
+                                a(href='brands.html').link.link--black Бренды
+                            li.nav-list__item
+                                a(href='delivery-payment.html').link.link--black Доставка и оплата
+                            li.nav-list__item
+                                a(href='services.html').link.link--black Услуги
+                            li.nav-list__item
+                                a(href='services.html').link.link--black Сервис
+
+                .footer__bottom
+                    .footer__policy
+                        a(href="support-offer.html").footer__title.link политика конфиденциальности
+
+                    .footer__devs
+                        a(href="https://di-project.studio/") разработка сайта
+                        span Di-Project.Studio

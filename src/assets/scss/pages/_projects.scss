@@ -1,0 +1,29 @@
+.projects {
+  .projects__inner-gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 100%;
+
+    @include breakpoint(md) {
+    grid-template-columns: repeat(2, calc(50% - 5px));
+      gap: 20px 10px;
+    }
+    @include breakpoint(lg) {
+    grid-template-columns: repeat(4, calc(25% - 5px));
+      gap: 32px 20px;
+    }
+    @include breakpoint(hd) {
+      gap: 24px 20px;
+
+      //grid-template-columns: repeat(4, calc(25% - 8px));
+    }
+
+    .general-card {
+      .general-card__img {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

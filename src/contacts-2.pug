@@ -1,0 +1,97 @@
+---
+title: Smartmedix | Контакты
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты', 'Контакты')
+    section.contacts
+        .container
+            .contacts__inner
+                .contacts__inner-switch
+                    a(href='contacts-1.html').switch-item
+                        span Отдел продаж
+                        include assets/images/icon_arrow-down.svg
+                    a(href='contacts-2.html').switch-item.active
+                        span Отдел сервиса
+                        include assets/images/icon_arrow-down.svg
+                .contacts__inner-data
+                    .data-address.data-item
+                        .data-item__heading
+                            .heading-title Адрес
+                            .heading-icon
+                                +img('icon_location.svg')
+                        .data-item__value г. Москва
+                        .data-item__description ул. Русаковская 13, 12 этаж, Офис 12-07
+
+                    .data-email.data-item
+                        .data-item__heading
+                            .heading-title Почта
+                            .heading-icon
+                                +img('icon_sms-gray.svg')
+                        a(href='mailto:servisinstr@gmail.com').data-item__value servisinstr@gmail.com
+                        .data-item__description Отдел продаж
+
+                    .data-call.data-item
+                        .data-item__heading
+                            .heading-title Телефон
+                            .heading-icon
+                                +img('icon_call.svg')
+                        a(href='tel:79002900099').data-item__value +7 (900) 290-00-99
+                        .data-item__description Звонок бесплатно
+
+
+
+                script.
+                  let placemarks = [{
+                    coordinates: [55.78457027530442,37.67347936400098],
+                  },]
+                  let centerPoint = [55.78457027530442,37.67347936400098]
+
+                .contacts__inner-map
+                    .map__wrapper
+                        #map(style="width:100%; height:100%; border-radius: 20px;")
+
+
+                .contacts__inner-requisites
+                    .contacts__inner-title Реквизиты компании
+                    .requisites__content
+                        .content-heading
+                            .content-heading__img
+                                +img('clipboard-text.svg')
+                            .content-heading__name АО «СМАРТМЕДИКС»
+                            .content-heading__director Генеральный директор: Константинов Константин Константинович
+
+                        .content-list
+                            ul
+                                li Банк: «Санкт-Петербургский» АО «Газпром банк»
+                                li БИК: 005643536
+                                li Корр. счет: 41101810600000000799
+                                li Расчетный счет: 41101810600000000799
+                            ul
+                                li ИНН: 7440038121
+                                li КПП: 784002003
+                                li ОГРН: 1417900478299
+                                li ОКПО: 66897508
+
+                .contacts__inner-files
+                    .contacts__inner-title Файлы для скачивания
+                    .files-wrapper
+                        .file
+                            .file-name Реквизиты SMARTMEDIX
+                            .file-info
+                                span.format PDF
+                                span.size 16 Mb
+                            .file-action
+                                a(href='javascript:void(0)' download target="_blank").btn.btn--blue Скачать
+                        .file
+                            .file-name Презентация о компании
+                            .file-info
+                                span.format PDF
+                                span.size 16 Mb
+                            .file-action
+                                a(href='javascript:void(0)' download target="_blank").btn.btn--blue Скачать

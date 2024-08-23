@@ -1,0 +1,65 @@
+block popups
+
+    // ПОПАП "ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК"
+    #popup-request.popup.popup-request-form
+        .popup-title Заявка на обратный звонок!
+
+        form
+            .form-row
+                input(type="text" name="popup-request-form_name" placeholder="Ваше имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-request-form_phone" placeholder="+7 (999) 999-99-99")
+            .form-row
+                input(type="email" name="popup-request-form_email" placeholder="E-mail")
+
+            .form-row
+                // в значение должно сразу подтягиваться наименование товаров
+                textarea(name="popup-request-form_products" placeholder="Наименования товаров")
+            .form-row
+                input(type="text" name="popup-request-form_organization" placeholder="Наименование организации")
+
+            .form-row.form-agreement
+                .checkbox-style
+                    input#agreement(type="checkbox" style="display:none" checked)
+                    label(for="agreement")
+                p соглашаюсь с <a class="link link--blue-underlined" href="policy.html">политикой конфиденциальности</a>
+            .form-action
+                button.btn.btn--blue(type="submit" data-src="#popup-success-request" data-fancybox) Оставить заявку
+
+    // ПОПАП "ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК"
+    #popup-offer.popup.popup-request-form
+        .popup-title Заявка на получение КП!
+
+        form
+            .form-row
+                input(type="text" name="popup-request-form_name" placeholder="Ваше имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-request-form_phone" placeholder="+7 (999) 999-99-99")
+            .form-row
+                input(type="email" name="popup-request-form_email" placeholder="E-mail")
+
+            .form-row
+                // в значение должно сразу подтягиваться наименование товаров
+                textarea(name="popup-request-form_products" placeholder="Наименования товаров")
+            .form-row
+                input(type="text" name="popup-request-form_organization" placeholder="Наименование организации")
+
+            .form-row.form-agreement
+                .checkbox-style
+                    input(type="checkbox" style="display:none" checked)
+                    label(for="agreement")
+                p соглашаюсь с <a class="link link--blue-underlined" href="policy.html">политикой конфиденциальности</a>
+            .form-action
+                button.btn.btn--blue(type="submit" data-src="#popup-success-request" data-fancybox) Оставить заявку
+
+    // ПОПАП "УСПЕШНО - ОБРАТНЫЙ ЗВОНОК"
+    #popup-success-request.popup.popup-success
+        .popup-title Ваша заявка успешно отправлена!
+        .popup-actions
+            a(href='/').btn.btn--blue На главную
+
+    // ПОПАП "УСПЕШНО - СПИСОК СРАВНЕНИЯ"
+    #popup-compare-list.popup.popup-success
+        .popup-title Товар добавлен в список сравнения!
+        .popup-actions
+            a(href='compare-list.html').btn.btn--blue Список сравнения

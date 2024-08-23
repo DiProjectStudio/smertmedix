@@ -1,0 +1,668 @@
+.hero {
+  margin-top: 12px;
+
+  @include breakpoint(md) {
+    margin-top: 24px;
+  }
+
+  .hero__inner {
+    .hero__inner-slider {
+      .swiper {
+
+        & > * {
+
+        }
+
+        .swiper-slide {
+          .slide-img {
+            height: 154px;
+            border-radius: 10px;
+
+            @include breakpoint(md) {
+              height: 280px;
+              border-radius: 20px;
+            }
+            @include breakpoint(lg) {
+              height: 442px;
+              border-radius: 40px;
+            }
+            @include breakpoint(hd) {
+              height: 502px;
+
+            }
+          }
+
+          img {
+
+          }
+        }
+
+        .swiper-nav {
+
+
+        }
+      }
+    }
+
+    .hero__inner-flags {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+
+      @include breakpoint(md) {
+        gap: 12px;
+        margin-top: 32px;
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 48px;
+      }
+
+      .flag {
+        @include flexCenterCenter;
+        gap: 10px;
+        padding: 10px 24px;
+        background-color: $gray-4;
+        border: 1px solid $gray-2;
+        border-radius: 10px;
+
+        .flag-img {
+          height: 28px;
+          width: 46px;
+
+          @include breakpoint(md) {
+            height: 46px;
+            width: 74px;
+          }
+        }
+
+        .flag-text {
+          font-size: 14px;
+          line-height: 120%;
+
+          @include breakpoint(md) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.promos {
+  .promos__inner-slider {
+    .swiper-slide {
+      overflow: hidden;
+
+      .slide-bg {
+        position: absolute;
+        top: calc(50% - 70px);
+        right: -20px;
+        width: 158px;
+        height: 139px;
+        z-index: 1;
+
+        @include breakpoint(md) {
+          width: 239px;
+          height: 212px;
+          top: calc(50% - 106px);
+          right: -60px;
+        }
+        @include breakpoint(lg) {
+          width: 253px;
+          height: 220px;
+          top: calc(50% - 110px);
+          right: -20px;
+        }
+
+        img {
+          object-fit: contain;
+
+        }
+      }
+
+      .slide__promo-wrapper {
+        padding: 16px 0 16px 12px;
+        width: 100%;
+
+        border-radius: 10px;
+        border: 1px solid $gray-1;
+        background: $white;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+        overflow: visible;
+
+
+        @include breakpoint(md) {
+          padding: 24px 0 24px 18px;
+          display: grid;
+          grid-template-columns: 60% 1fr;;
+        }
+        @include breakpoint(lg) {
+          padding: 24px 0 24px 18px;
+          display: grid;
+          //grid-template-columns: 55% 1fr;;
+        }
+      }
+
+      .slide-images {
+        position: relative;
+
+        .slide-img {
+          z-index: 2;
+          position: absolute;
+          bottom: 10px;
+          right: 0;
+          width: 100px;
+          height: 113px;
+
+          @include breakpoint(md) {
+            top: calc(50% - 78px);
+            width: 138px;
+            height: 156px;
+          }
+
+          @include breakpoint(lg) {
+            width: 172px;
+            height: 203px;
+          }
+          @include breakpoint(hd) {
+            width: 155px;
+            height: 214px;
+          }
+        }
+      }
+
+      .slide__promo-info {
+        display: grid;
+        gap: 6px;
+        position: relative;
+        z-index: 3;
+
+        @include breakpoint(md) {
+          grid-column: 1/2;
+        }
+
+        .promo-info__title {
+          line-height: 120%;
+
+          @include breakpointMax(md) {
+            width: 85%;
+          }
+          @include breakpoint(lg) {
+            font-size: 20px;
+          }
+        }
+
+        .promo-info__description {
+          @include titleGeneral;
+          color: $blue-primary;
+        }
+
+        .promo-info__value {
+          @include titleGeneral;
+          color: $red;
+          font-size: 32px;
+
+          @include breakpoint(md) {
+            font-size: 40px;
+          }
+        }
+
+        .promo-info__btn {
+          margin-top: 6px;
+          //padding: 12px 24px;
+          //width: fit-content;
+          height: 45px;
+
+          @include breakpointMax(md) {
+            font-size: 14px;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+.brands {
+  .brands__inner-slider {
+
+    .brand-slide {
+      @include brandStyle;
+
+      transition: $transition-style;
+
+      &:hover {
+        border-color: $blue-primary;
+      }
+
+      .slide-img {
+        width: 129px;
+        height: 38px;
+
+        @include breakpoint(lg) {
+          width: 188px;
+          height: 56px;
+        }
+        @include breakpoint(hd) {
+          width: 174px;
+          height: 52px;
+        }
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+
+  }
+}
+
+.complex {
+  .complex__inner {
+
+    .section-head__link {
+      @include breakpointMax(md) {
+        margin-top: 12px;
+        padding: 12px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.services {
+  .services__inner-slider .swiper-wrapper {
+
+    @include breakpoint(lg) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+.info {
+  .info__inner ~ .info__inner {
+    margin-top: 32px;
+
+    @include breakpoint(lg) {
+    margin-top: 48px;
+    }
+  }
+  .info__inner-slider {
+    margin-top: 24px;
+
+    @include breakpoint(md) {
+      margin-top: 32px;
+    }
+  }
+
+  &.info-slides {
+
+  }
+}
+
+.terms {
+
+  &.delivery-pay-page {
+    .terms__inner-payment {
+      margin-bottom: 15px;
+
+    }
+  }
+
+  .terms-block ~ .terms-block {
+    margin-top: 32px;
+
+    @include breakpoint(md) {
+      margin-top: 48px;
+    }
+  }
+
+  .terms-block {
+    .terms-heading + .terms-content {
+      margin-top: 24px;
+      @include breakpoint(lg) {
+        margin-top: 32px;
+      }
+    }
+
+    .terms-heading {
+      font-size: 24px;
+    }
+
+    .terms-content__items {
+      display: grid;
+
+      .terms-content__item {
+        gap: 12px;
+      }
+    }
+  }
+
+  .terms__inner-items {
+    display: grid;
+    gap: 16px;
+
+    @include breakpoint(hd) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .terms__inner-item {
+      border-radius: 20px;
+      display: grid;
+      gap: 16px;
+      background-color: $gray-3;
+      @include breakpointMax(md) {
+        padding-bottom: 16px;
+      }
+
+      @include breakpoint(md) {
+        align-items: center;
+        grid-template-columns: calc(100% / 20 * 9) 1fr;
+        gap: 19px;
+        padding-right: 24px;
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: calc(100% / 20 * 8) 1fr;
+        gap: 80px;
+      }
+      @include breakpoint(hd) {
+        grid-template-columns: calc(100% / 10 * 4) 1fr;
+        gap: 32px;
+        padding-right: 40px;
+      }
+
+      .term-img {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        height: 308px;
+
+        @include breakpoint(md) {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: inherit;
+          height: 312px;
+        }
+        @include breakpoint(lg) {
+          height: 294px;
+        }
+      }
+
+      .term-info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 10px 12px;
+
+        @include breakpointMax(md) {
+          padding: 0 12px;
+        }
+
+
+        .term-info__icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        .term-info__title {
+          font-size: 20px;
+        }
+
+        .term-info__text {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  .terms__inner-payment {
+
+    .terms-content {
+
+      @include breakpoint(md) {
+        box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 20px 20px;
+      }
+
+      .payment-switch {
+        @include breakpointMax(md) {
+          display: none;
+        }
+
+        background-color: $blue-light-1;
+        padding: 12px 81px;
+        @include flexCenterCenter;
+        gap: 20px;
+        border-radius: 20px 20px 0 0;
+        @include breakpoint(lg) {
+          gap: 64px;
+        }
+
+        .switch-item {
+          padding: 12px 32px;
+          font-weight: 600;
+          line-height: 140%;
+          color: $blue-primary;
+          border-radius: 10px;
+          background-color: transparent;
+          transition: $transition-style;
+          cursor: pointer;
+          @include flexCenterCenter;
+
+          @include breakpoint(lg) {
+            //padding: 12px 24px;
+            width: 223px;
+          }
+
+          &.active {
+            background-color: $white;
+            box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.08);
+          }
+        }
+
+
+      }
+
+
+      .terms-content__items {
+        gap: 12px;
+
+        .terms-content__item {
+          padding: 24px 16px;
+          background-color: $white;
+
+          @include breakpointMax(md) {
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15);
+          }
+
+          @include breakpoint(md) {
+            column-gap: 20px;
+            padding: 48px 25px;
+            &:not(.active) {
+              display: none;
+            }
+          }
+
+          @include breakpoint(lg) {
+            width: calc(100% / 20 * 11);
+            margin: 0 auto;
+          }
+          @include breakpoint(xl) {
+            width: calc(100% / 20 * 8);
+          }
+
+          .item-icon {
+            width: 44px;
+            height: 44px;
+
+            @include breakpoint(md) {
+              width: 80px;
+              height: 80px;
+              grid-row: 1/3;
+            }
+
+            @include breakpoint(lg) {
+              width: 90px;
+              height: 86px;
+            }
+          }
+
+          .item-text {
+            @include breakpoint(md) {
+              grid-column: 2/3;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .terms__inner-delivery {
+    .terms-content__items {
+      gap: 16px;
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .terms-content__item {
+        padding: 24px;
+        background-color: $gray-3;
+
+        .item-icon {
+          width: 38px;
+          height: 38px;
+        }
+      }
+
+
+    }
+  }
+
+
+}
+
+.partnership {
+  .partnership__inner {
+    .partnership__inner-head {
+      text-align: center;
+
+      .title {
+        margin: 0 auto;
+      }
+    }
+
+    .partnership__inner-items {
+      display: grid;
+      gap: 16px;
+
+      @include breakpoint(md) {
+        gap: 20px;
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .partnership__inner-item {
+        padding: 24px;
+        gap: 24px 12px;
+        box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15);
+
+
+        .item-icon {
+          width: 44px;
+          height: 44px;
+        }
+      }
+
+    }
+
+    .partnership__inner-contacts {
+      display: grid;
+      gap: 10px;
+
+      margin-top: 24px;
+
+      @include breakpoint(md) {
+        margin-top: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      @include breakpoint(hd) {
+        margin-top: 48px;
+      }
+
+      .partnership__inner-contact {
+        display: grid;
+        gap: 12px;
+        border: 1px solid $blue-primary;
+        border-radius: 10px;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.10);
+        padding: 24px 0;
+        justify-content: center;
+        background-color: transparent;
+        transition: $transition-style;
+
+        &:hover {
+          background-color: $blue-light-1;
+        }
+
+        @include breakpoint(md) {
+          border-radius: 20px;
+          gap: 16px;
+          padding: 47px 0;
+        }
+        @include breakpoint(hd) {
+          padding: 90px 0;
+        }
+
+        .contact-icon {
+          width: 72px;
+          height: 72px;
+          padding: 20px;
+          margin: 0 auto;
+          border: 1px solid $blue-primary;
+          border-radius: 50%;
+        }
+
+        span {
+          font-size: 20px;
+          color: $blue-primary;
+        }
+      }
+
+      .partnership__inner-image {
+
+        border-radius: 20px;
+        height: 189px;
+
+        @include breakpoint(md) {
+          grid-column: span 2;
+          height: 215px;
+        }
+        @include breakpoint(lg) {
+          height: 250px;
+        }
+        @include breakpoint(hd) {
+          height: 299px;
+        }
+      }
+
+    }
+  }
+}

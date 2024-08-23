@@ -1,0 +1,55 @@
+---
+title: Smartmedix | Бренды
+bodyClass: brands-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Бренды', 'Бренды')
+
+    - const engLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    - const rusLetters = 'АБВГДЕЖЗИЙКЛМНОРСТУФЭ'.split('');
+
+    section.brands
+        .container
+            .brands__inner
+                .brands__inner-letters
+                    .letters.eng
+                      each letter in engLetters
+                          .letter= letter
+                    .letters.rus
+                      each letter in rusLetters
+                          .letter= letter
+    section.brands-list
+        .container
+            .brands-list__inner
+                .brands-group
+                    .brands-group__title А
+                    .brands-group__items
+                        .brand
+                            .brand-logo
+                                +img('brand-1.png')
+                            .brand-name Ardo
+                        .brand
+                            .brand-logo
+                                +img('brand-1.png')
+                            .brand-name Ardo
+                        .brand
+                            .brand-logo
+                                +img('brand-1.png')
+                            .brand-name Ardo
+                .brands-group
+                    .brands-group__title B
+                    .brands-group__items
+                        .brand
+                            .brand-logo
+                                +img('brand-1.png')
+                            .brand-name Ardo
+                        .brand
+                            .brand-logo
+                                +img('brand-1.png')
+                            .brand-name Ardo
+
+                //include components/_pagination

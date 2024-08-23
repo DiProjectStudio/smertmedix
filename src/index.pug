@@ -1,0 +1,463 @@
+---
+title: Smartmedix | Главная
+bodyClass: main-page
+---
+
+extends includes/_page
+
+block main
+    section.hero
+        .container
+            .hero__inner
+                .hero__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slide-img
+                                    +img('hero-bg.jpg')
+                            .swiper-slide
+                                .slide-img
+                                    +img('hero-bg.jpg')
+                            .swiper-slide
+                                .slide-img
+                                    +img('hero-bg.jpg')
+                        include ./components/_swiper-nav
+                .hero__inner-flags
+                    .flag
+                        .flag-img
+                            +img('flag-rus.png')
+                        p.flag-text Оборудование Российских производителей
+                    .flag
+                        .flag-img
+                            +img('flag-china.png')
+                        p.flag-text Оборудование Китайских производителей
+
+    section.promos
+        .container
+            .promos__inner
+                .promos__inner-head.section-head
+                    h2.title Акции
+                .promos__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').slide__promo-wrapper
+                                    .slide__promo-info
+                                        .promo-info__title Инкубатор интенсивной терапии AMELIE
+                                        .promo-info__description Скидка до конца месяца
+                                        .promo-info__value 40%
+                                        .promo-info__btn.btn.btn--blue-bordered Подробнее
+                                    .slide-images
+
+                                        .slide-img
+                                            +img('equip-1.png')
+                                .slide-bg
+                                    +img('layer-1.svg')
+                            .swiper-slide
+                                a(href='javascript:void(0)').slide__promo-wrapper
+                                    .slide__promo-info
+                                        .promo-info__title Фетальный монитор Avalon FM30
+                                        .promo-info__description Скидка до конца месяца
+                                        .promo-info__value 40%
+                                        .promo-info__btn.btn.btn--blue-bordered Подробнее
+                                    .slide-images
+
+                                        .slide-img
+                                            +img('equip-2.png')
+                                .slide-bg
+                                    +img('layer-2.svg')
+                            .swiper-slide
+                                a(href='javascript:void(0)').slide__promo-wrapper
+                                    .slide__promo-info
+                                        .promo-info__title Пульсоксиметр Mindray PM-60
+                                        .promo-info__description Скидка до конца месяца
+                                        .promo-info__value 40%
+                                        .promo-info__btn.btn.btn--blue-bordered Подробнее
+                                    .slide-images
+
+                                        .slide-img
+                                            +img('equip-3.png')
+                                .slide-bg
+                                    +img('layer-3.svg')
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+
+    section.brands
+        .container
+            .brands__inner
+                .brands__inner-head.section-head
+                    h2.title Бренды
+                    a(href='brands.html').section-head__link.link.link--blue-underlined все бренды
+                .brands__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+
+
+    section.complex
+        .container
+            .complex__inner
+                .complex__inner-head.section-head
+                    h2.title Комплексное оснащение отделений
+
+                .complex__inner-slider.general-card-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('complex-1.jpg')
+                                    .general-card__name Наименование отделения / кабинета, наименование отделения / кабинета
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('complex-1.jpg')
+                                    .general-card__name Наименование отделения / кабинета, наименование отделения / кабинета
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('complex-1.jpg')
+                                    .general-card__name Наименование отделения / кабинета, наименование отделения / кабинета
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('complex-1.jpg')
+                                    .general-card__name Наименование отделения / кабинета, наименование отделения / кабинета
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('complex-1.jpg')
+                                    .general-card__name Наименование отделения / кабинета, наименование отделения / кабинета
+
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+                a(href='cabinets.html').section-head__link.link.link.link--blue-underlined 50 кабинетов
+
+    section.services
+        .container
+            .services__inner
+                .services__inner-head.section-head
+                    h2.title Наши услуги
+                .services__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-1.jpg')
+                                    .general-card__name Проектирование отделений под ключ
+                                    .general-card__action
+                                        a(href='services-design.html').btn.btn--blue Подробнее
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-2.jpg')
+                                    .general-card__name Обучение врачей и инженеров
+                                    .general-card__action
+                                        a(href='services-education.html').btn.btn--blue Подробнее
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-3.jpg')
+                                    .general-card__name Услуги сервиса
+                                    .general-card__action
+                                        a(href='services-maintenance.html').btn.btn--blue Подробнее
+
+    section.info.info-slides
+        .container
+            .info__inner
+                .info__inner-tabs.tabs
+                    .tab.active Новости
+                    .tab Статьи
+                    .tab Обзоры
+
+                .info__inner-slider.general-card-slider.active
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+
+                .info__inner-slider.general-card-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+
+                .info__inner-slider.general-card-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                            .swiper-slide
+                                a(href='javascript:void(0)').general-card
+                                    .general-card__img
+                                        +img('cover.jpg')
+                                    .general-card__name Наименование новости/статьи/ обзора Наименование новости/статьи/ обзора
+
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+
+    section.terms
+        .container
+            .terms__inner
+                .terms__inner-head.section-head
+                    h2.title Условия сотрудничества
+                .terms__inner-items.terms-block
+                    .terms__inner-item
+                        .term-img
+                            +img('partnership-1.jpg')
+                        .term-info
+                            .term-info__icon
+                                +img('courthouse.svg')
+                            .term-info__title Для гос. учреждений
+                            .term-info__text Реализация медицинского оборудования производится в полном соответствии с действующими Федеральными законами: 44-Ф3, 223-Ф3. Наша компания аккредитована на всех известных электронных торговых площадках РФ. Также мы зарегистрированы на официальном государственном портале поставщиков, что позволяет нам размещать оферты на любое интересное для вас оборудование.
+                    .terms__inner-item
+                        .term-img
+                            +img('partnership-2.jpg')
+                        .term-info
+                            .term-info__icon
+                                +img('hospital.svg')
+                            .term-info__title Для частного сектора
+                            .term-info__text Оплата производится посредством безналичного расчёта на основании договора и счёта. Условия договора согласуются в индивидуальном порядке. Предоставляем гибкую систему оплаты: рассрочка, лизинг трейд ин вашего оборудования.
+
+
+                .terms__inner-payment.terms-block
+                    .terms-heading Оплата
+                    .terms-content
+                        .payment-switch
+                            .switch-item.active Лизинг
+                            .switch-item Рассрочка
+                            .switch-item Trade-in
+
+                        .terms-content__items
+                            .terms-content__item.icon-text-item.active
+                                .item-icon
+                                    +img('leasing.svg')
+                                .item-title Лизинг
+                                .item-text Финансовая аренда с правом выкупа оборудования и сохранением денежных средств в обороте компании.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('installment.svg')
+                                .item-title Рассрочка
+                                .item-text Приобретение оборудования с возможностью оплаты равными частями на срок от 3 до 6 месяцев.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('refresh-1.svg')
+                                .item-title Trade-in
+                                .item-text Приобретение нового оборудования взамен старому, распространяется не на все категории аппаратов.
+
+
+                .terms__inner-delivery.terms-block
+                    .terms-heading Доставка
+                    .terms-content
+                        .terms-content__items
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('timer.svg')
+                                .item-title Быстрая отгрузка
+                                .item-text Доставка оборудования осуществляется надежными транспортными компаниями с соблюдением всех необходимы требований производителя при транспортировке.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('share.svg')
+                                .item-title Большой опыт
+                                .item-text Доставка оборудования осуществляется надежными транспортными компаниями с соблюдением всех необходимы требований производителя при транспортировке.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('verify.svg')
+                                .item-title Всё включено
+                                .item-text Такелажные работы, доставка и монтаж включены в стоимость.
+                            .terms-content__item.icon-text-item
+                                .item-icon
+                                    +img('delivery.svg')
+                                .item-title Любые виды перевозок
+                                .item-text Доставка оборудования осуществляется надежными транспортными компаниями с соблюдением всех необходимы требований производителя при транспортировке.
+
+
+
+
+
+    section.partnership
+        .container
+            .partnership__inner
+                .partnership__inner-head.section-head
+                    h2.title SMARTMEDIX приглашает к сотрудничеству торгующие организации
+
+                .partnership__inner-items
+                    .partnership__inner-item.icon-text-item
+                        .item-icon
+                            +img('coin.svg')
+                        .item-title Финансовые условия
+                        .item-text
+                            ul
+                                li Гибкая система скидок от лидера рынка
+                                li Выгодные цены на оборудование собственного производства
+                                li Индивидуальные условия взаиморасчёта
+                    .partnership__inner-item.icon-text-item
+                        .item-icon
+                            +img('routing.svg')
+                        .item-title Удобная логистика
+                        .item-text
+                            ul
+                                li 4 склада в Екатеринбурге, Москве, Санкт-Петербурге и Новосибирске
+                                li Широкий ассортимент оборудования в наличии, отгрузка от 2-х дней
+                                li Оперативная доставка в любой регион РФ наземным и воздушным транспортом
+                    .partnership__inner-item.icon-text-item
+                        .item-icon
+                            +img('refresh-2.svg')
+                        .item-title Полное сопровождение на всех этапах сделки
+                        .item-text
+                            ul
+                                li Поможем в консультации специалистов ЛПУ
+                                li Подберём модель и комплектующие
+                                li Поможем в подготовке тендерной документации с учётом требований 44 и 223 ФЗ
+                                li Оперативно доставим груз в любой, даже самый отдалённый регион
+                                li Смонтируем оборудование
+                                li Проведём настройку оборудования и ввод в эксплуатацию
+                                li Обучим представителей ЛПУ
+                                li Окажем гарантийное обслуживание и ремонт по стандартам производителя
+                    .partnership__inner-item.icon-text-item
+                        .item-icon
+                            +img('tick-circle.svg')
+                        .item-title Комфортные условия для вашего бизнеса
+                        .item-text
+                            ul
+                                li Персональный менеджер
+                                li Обучение и консультации по маркетинговым и техническим аспектам
+                                li Помощь в подборе оборудования и комплектующих
+                                li Порядок с лицензиями и сертификатами
+                                li Помощь в организации выставок
+                                li Широкий ассортимент медицинского оборудования
+                                li Собственные сервисные центры
+                .partnership__inner-contacts
+                    a(href='javascript:void(0)' data-src="#popup-request" data-fancybox).partnership__inner-contact
+                        .contact-icon
+                            +img('icon_call.svg')
+                        span Оставить заявку
+                    a(href='mailto:servisinstr@gmail.com').partnership__inner-contact
+                        .contact-icon
+                            +img('icon_sms.svg')
+                        span Написать письмо
+
+                    .partnership__inner-image
+                        +img('partnership-cover.jpg')

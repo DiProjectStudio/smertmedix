@@ -1,0 +1,627 @@
+// ОБЩИЕ СТИЛИ
+
+.company-services {
+  &:not(.service-page) {
+    .general-card {
+      padding: 24px 16px;
+      border-radius: 20px;
+      background-color: $gray-3;
+
+      @include breakpoint(hd) {
+        padding-left: 32px;
+      }
+
+      .general-card__text {
+
+        @include breakpointMax(lg) {
+          @include textLimit(4);
+        }
+      }
+    }
+  }
+
+  .general-card {
+    gap: 6px;
+
+    .general-card__name {
+      font-weight: 500;
+      font-size: 16px;
+
+
+      @include breakpoint(xl) {
+        font-size: 20px;
+      }
+    }
+
+    .general-card__text {
+      line-height: 130%;
+
+      @include breakpointMax(lg) {
+        //@include textLimit(4);
+      }
+    }
+
+    .general-card__action {
+      @include breakpointMax(xl) {
+        margin: 16px auto 0;
+      }
+
+      .btn {
+        padding: 12px 24px;
+      }
+    }
+
+    .general-card__img {
+      box-shadow: none;
+      border-color: transparent;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.company-services {
+  .company-services__inner {
+
+    .company-services__inner-items {
+      display: grid;
+      gap: 10px;
+
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint(xl) {
+        gap: 20px;
+
+      }
+
+      .general-card {
+        @include breakpoint(hd) {
+          grid-template-columns:1fr 38%;
+          column-gap: 23px;
+        }
+
+        .general-card__name {
+          margin-top: 14px;
+
+          @include breakpoint(xl) {
+            font-size: 24px;
+          }
+        }
+
+        .general-card__img {
+          height: 200px;
+
+          @include breakpoint(lg) {
+            height: 294px;
+
+          }
+          @include breakpoint(hd) {
+            height: 286px;
+            grid-column: 2/3;
+            grid-row: 1/4;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+
+// СТРАНИЦА ОТДЕЛЬНОЙ УСЛУГИ
+
+.company-services.service-page {
+  .company-services__inner {
+
+    @include breakpoint(lg) {
+      display: grid;
+      grid-template-columns: calc(100% / 20 * 10) 1fr;
+      gap: 0 79px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include breakpoint(hd) {
+      grid-template-columns: 708px 790px;
+    }
+
+    .general-card__img {
+      @include breakpoint(lg) {
+        border-radius: 20px;
+        height: 325px;
+      }
+      @include breakpoint(hd) {
+        height: 526px;
+      }
+    }
+
+    .section-head {
+      margin-bottom: 8px;
+
+      .title {
+        width: 100%;
+      }
+
+      @include breakpoint(lg) {
+        margin-bottom: 0;
+        //align-self: flex-end;
+        //grid-column: 1/2;
+        //grid-row: 1/2;
+      }
+    }
+
+    .general-card {
+      gap: 16px;
+
+      @include breakpoint(lg) {
+        gap: 24px;
+      }
+
+
+      .general-card__img {
+        height: 210px;
+        @include breakpoint(md) {
+          border-radius: 20px;
+          height: 389px;
+        }
+        @include breakpoint(lg) {
+          height: 325px;
+          //grid-column: 2/3;
+          //grid-row: 1/4;
+        }
+        @include breakpoint(hd) {
+          height: 526px;
+        }
+      }
+
+      .general-card__text {
+        @include breakpoint(hd) {
+          font-size: 20px;
+        }
+
+      }
+
+      .general-card__action {
+        margin-top: 0;
+
+        .btn {
+          height: 45px;
+        }
+
+        @include breakpoint(lg) {
+          margin: 0;
+          //align-self: flex-start;
+        }
+      }
+
+
+    }
+  }
+
+
+  &.services-design-inner {
+
+    .company-services__inner {
+      align-items: unset;
+
+      .general-card__img {
+        @include breakpoint(lg) {
+          position: sticky;
+          top: 65px;
+        }
+      }
+    }
+
+
+    .design-services {
+
+      margin-top: 48px;
+
+      @include breakpoint(md) {
+        margin-top: 64px;
+      }
+      @include breakpoint(lg) {
+        margin-top: 48px;
+      }
+
+      h3 + p {
+        margin-top: 24px;
+      }
+
+      p ~ p {
+        margin-top: 12px;
+      }
+
+      p + h3 {
+        margin-top: 48px;
+      }
+
+      //.title +
+    }
+  }
+}
+
+.services-benefits {
+  .services-benefits__inner-items {
+    display: grid;
+    gap: 16px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
+
+    @include breakpoint(lg) {
+      gap: 79px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(xl) {
+      grid-gap: 101px;
+    }
+
+    .icon-text-item {
+      gap: 16px 24px;
+      padding: 24px;
+      border: 1px solid $gray-1;
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.10);
+
+      @include breakpoint(lg) {
+        //padding: 24px;
+        //column-gap: 24px;
+      }
+
+
+      @include breakpoint(xl) {
+        //padding: 24px;
+      }
+
+
+      .item-icon {
+        width: 48px;
+        height: 48px;
+
+      }
+
+      .item-title {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.info-basic {
+  .info-basic__inner {
+
+    @include breakpoint(lg) {
+      display: grid;
+      grid-template-columns: calc(100% / 20 * 9) 1fr;
+      column-gap: 20px;
+    }
+    @include breakpoint(hd) {
+      display: grid;
+      grid-template-columns: calc(100% / 20 * 9) 1fr;
+      column-gap: 101px;
+    }
+
+    .faq__wrapper {
+
+
+      .faq__item {
+        padding: 16px 24px;
+
+        background: $white;
+        border-radius: 10px;
+        border: 1px solid $black;
+        user-select: none;
+        transition: $transition-style;
+
+
+        @include breakpoint(lg) {
+          padding: 24px;
+        }
+
+        &.expanded, &.active {
+          border-width: 2px;
+          border-color: $blue-primary;
+        }
+
+        &.expanded {
+          .faq__question {
+            .faq__question-icon {
+              img {
+                transform: rotate(-180deg);
+              }
+            }
+          }
+
+          .faq__answer {
+            padding-top: 16px;
+            max-height: fit-content;
+
+            @include breakpoint(md) {
+              padding-top: 24px;
+            }
+          }
+
+        }
+
+        .faq__question {
+          @include flexCenterBetween;
+          cursor: pointer;
+
+          .faq__question-text {
+            width: 90%;
+            @include flexAlignCenter;
+            gap: 10px;
+            @include breakpoint(lg) {
+              flex-direction: column;
+              align-items: unset;
+            }
+
+            .num {
+              font-size: 14px;
+              @include titleGeneral;
+            }
+          }
+
+          .faq__question-icon {
+            height: 24px;
+            width: 24px;
+
+            @include breakpoint(lg) {
+              display: none;
+            }
+
+            img {
+              transition: $transition-style;
+            }
+          }
+        }
+
+        .faq__answer {
+          padding-top: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: $transition-style;
+        }
+
+
+      }
+
+      .faq__item ~ .faq__item {
+        margin-top: 12px;
+
+        @include breakpoint(lg) {
+          margin-top: 16px;
+        }
+      }
+
+
+    }
+
+    .faq__answers {
+      @include breakpointMax(lg) {
+        display: none;
+      }
+
+      @include breakpoint(lg) {
+        padding: 24px;
+        border-radius: 20px;
+        background-color: $blue-light-1;
+      }
+
+      .faq__answer {
+        display: none;
+        animation: fadeOut .6s ease forwards;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    .faq__answer {
+      h4 {
+        @include breakpointMax(lg) {
+          display: none;
+        }
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+
+      p ~ p {
+        margin-top: 12px;
+      }
+
+
+    }
+  }
+}
+
+.cabinets {
+
+  .cabinets__inner-items {
+    display: grid;
+    gap: 16px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 22px;
+    }
+    @include breakpoint(hd) {
+      gap: 24px 32px;
+    }
+  }
+
+}
+
+.form-section {
+
+  .form-section__inner {
+    background-color: $blue-light-1;
+    border-radius: 20px;
+    padding: 24px 16px;
+
+    .section-head {
+      .title {
+        font-weight: 400;
+      }
+    }
+
+    @include breakpoint(md) {
+      padding: 48px 32px;
+    }
+    @include breakpoint(lg) {
+      padding: 48px;
+    }
+    @include breakpoint(hd) {
+      width: 1291px;
+      margin: 0 auto;
+    }
+
+    form {
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 12px 20px;
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .form-row {
+        &:nth-child(7) {
+          textarea {
+            height: 159px;
+
+            @include breakpoint(md) {
+              height: 100%;
+            }
+            @include breakpoint(md) {
+              //height: 100%;
+            }
+          }
+
+          @include breakpoint(md) {
+            margin-top: 8px;
+            grid-column: span 2;
+          }
+
+          @include breakpoint(lg) {
+            margin-top: 0;
+            grid-column: 3/4;
+            grid-row: 1/4;
+          }
+        }
+
+        @include breakpoint(lg) {
+          &:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+          }
+          &:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+          }
+        }
+
+        &.form-agreement {
+          @include breakpoint(md) {
+            grid-column: span 2;
+          }
+
+          p {
+            @include breakpoint(md) {
+              width: 100%;
+              display: flex;
+              gap: 8px;
+            }
+          }
+        }
+      }
+
+      .form-action {
+        @include breakpoint(md) {
+          grid-column: span 2;
+        }
+
+
+        .btn {
+          //height: 45px;
+          //margin: 0 auto;
+        }
+
+      }
+    }
+
+  }
+}
+
+.standards {
+  .standards-inner__list {
+
+
+    @include breakpoint(lg) {
+      column-count: 2;
+    }
+
+    ol {
+      counter-reset: list-counter;
+
+
+      & > li {
+        counter-increment: list-counter;
+        text-indent: 0;
+        padding: 8px 12px;
+        border-bottom: 1px solid $gray-1;
+
+
+        a {
+          @include titleGeneral;
+          color: $blue-primary;
+          @include textLimit(1);
+          //position: relative;
+
+          &::before {
+            color: $blue-primary;
+            @include titleGeneral;
+            margin-right: 5px;
+            content: counter(list-counter) ". ";
+          }
+        }
+
+
+      }
+
+      li ~ li {
+        margin-top: 4px;
+      }
+
+      li {
+
+      }
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes fadeOut {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}

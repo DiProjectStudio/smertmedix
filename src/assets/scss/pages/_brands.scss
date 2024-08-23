@@ -1,0 +1,242 @@
+.brands {
+  .brands__inner {
+    .brands__inner-letters {
+
+      .letters ~ .letters {
+        margin-top: 10px;
+      }
+
+      .letters {
+        @include flexAlignCenter;
+        gap: 12px;
+        flex-wrap: wrap;
+        @include breakpoint(md) {
+          gap: 10px;
+        }
+
+        .letter {
+          width: 32px;
+          height: 32px;
+          @include flexCenterCenter;
+          @include titleGeneral;
+          border-radius: 6px;
+          background-color: $gray-2;
+          cursor: pointer;
+          @include breakpoint(lg) {
+            width: 49px;
+            height: 49px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.brands-list {
+  .brands-list__inner {
+    .brands-group ~ .brands-group {
+      margin-top: 48px;
+    }
+
+    .brands-group__title {
+      font-size: 24px;
+
+      @include breakpoint(md) {
+        font-size: 28px;
+      }
+    }
+
+    .brands-group__items {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 10px;
+
+      @include breakpoint(md) {
+        margin-top: 32px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @include breakpoint(lg) {
+        gap: 32px 20px;
+      }
+
+      @include breakpoint(hd) {
+        //margin-top: 32px;
+        grid-template-columns: repeat(5, 1fr);
+        //column-gap: ;
+      }
+
+      .brand {
+        display: grid;
+        //justify-content: center;
+        gap: 4px;
+
+        @include breakpoint(md) {
+          gap: 8px;
+        }
+        @include breakpoint(hd) {
+          gap: 12px;
+        }
+
+        .brand-logo {
+          @include brandStyle;
+
+          img {
+            height: 30px;
+
+            @include breakpoint(lg) {
+              height: 52px;
+            }
+          }
+        }
+
+        .brand-name {
+          text-align: center;
+
+          @include breakpoint(hd) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.company-services.service-page.brand-inner {
+
+  .company-services__inner {
+    @include breakpoint(lg) {
+      align-items: unset;
+      grid-template-columns: 50% 43%;
+    }
+    @include breakpoint(hd) {
+      align-items: center;
+      grid-template-columns: 708px 790px;
+    }
+
+    .general-card {
+
+
+
+      .general-card__logo {
+        height: 80px;
+        width: 304px;
+        padding: 10px;
+        @include flexCenterCenter;
+        border-radius: 10px;
+        border: 1px solid $gray-1;
+
+        @include breakpointMax(lg) {
+          display: none;
+        }
+
+        img {
+          height: 46px;
+          object-fit: contain;
+        }
+      }
+
+      .general-card__text {
+        p + p {
+          margin-top: 16px;
+
+          @include breakpoint(lg) {
+            margin-top: 12px;
+          }
+        }
+
+        h2 + p {
+          margin-top: 24px;
+
+          @include breakpoint(lg) {
+            margin-top: 32px;
+          }
+        }
+
+        p + h2 {
+          margin-top: 48px;
+
+          @include breakpoint(md) {
+            margin-top: 64px;
+          }
+          @include breakpoint(lg) {
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+
+    .swiper {
+      border-radius: 20px;
+      height: 100%;
+
+      .swiper-nav {
+        @include breakpoint(md) {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
+
+.products-categories {
+  .products-categories__inner-items {
+    display: grid;
+    gap: 16px;
+
+    @include breakpoint(md) {
+      gap: 24px 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(lg) {
+      gap: 32px 20px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint(hd) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .item {
+      //padding: 0 12px;
+
+      .item-heading {
+        @include flexAlignCenter;
+        gap: 12px;
+        padding: 8px 12px;
+        border-bottom: 1px solid $gray-2;
+
+        @include breakpoint(md) {
+          //padding-left: 16px;
+        }
+
+        .item-heading__icon {
+          width: 20px;
+          height: 24px;
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        .item-heading__name {
+          @include titleGeneral;
+        }
+      }
+
+      .item-list {
+        margin-top: 12px;
+
+        li {
+          padding: 12px;
+        }
+
+        li ~ li {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,304 @@
+.product {
+  padding: 12px 6px;
+  position: relative;
+  border: 1px solid $gray-1;
+  border-radius: 15px;
+  transition: $transition-style;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10);
+  margin-bottom: 4px;
+
+  @include breakpoint(md) {
+    padding: 16px 8px;
+  }
+
+  @include breakpoint(lg) {
+    padding: 16px;
+  }
+
+  @include breakpoint(hd) {
+    padding: 16px 12px;
+  }
+
+  .product-image {
+    height: 132px;
+    @include flexColumn;
+    @include breakpoint(md) {
+      height: 182px;
+    }
+
+    .image-wrapper {
+      width: auto;
+      height: 88px;
+      margin-top: auto;
+      margin-bottom: 8px;
+
+      @include breakpoint(md) {
+        margin-bottom: 20px;
+      }
+
+      img {
+        object-fit: contain;
+        vertical-align: bottom;
+      }
+
+      @include breakpoint(md) {
+        height: 130px;
+      }
+    }
+  }
+
+  .product-info {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 6px;
+    @include titleGeneral;
+    font-size: 14px;
+
+    @include breakpoint(md) {
+      gap: 12px;
+    }
+
+    .product-info__manufacturer {
+      color: $gray-1;
+    }
+
+    .product-info__name {
+      color: $blue-primary;
+    }
+
+    .product-info__characteristics {
+      @include listStyleDots;
+
+      ul {
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 140%;
+        @include textLimit(5);
+
+
+        li ~ li {
+          margin-top: 4px;
+        }
+      }
+    }
+
+
+    .product-info__actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 6px;
+
+      @include breakpoint(md) {
+        gap: 12px;
+      }
+
+      .btn {
+        width: 100%;
+        @include flexCenterCenter;
+        font-size: 12px;
+
+
+        @include breakpointMax(md) {
+          padding: 12px 6px;
+        }
+
+        @include breakpoint(md) {
+          font-size: 14px;
+        }
+
+        @include breakpoint(lg) {
+          font-size: 16px;
+          padding: 12px;
+        }
+
+      }
+
+      .action-compare {
+        width: 38px;
+        height: 38px;
+        //padding: 7px;
+        @include flexCenterCenter;
+        border: 1px solid $gray-1;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: $transition-style;
+
+        &:hover {
+          border-color: $blue-primary;
+
+          svg path {
+            stroke: $blue-primary
+          }
+        }
+
+        &.active {
+          border-color: $blue-hover;
+
+          svg path {
+            stroke: $blue-hover
+          }
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+
+          path {
+            transition: $transition-style;
+          }
+        }
+      }
+    }
+  }
+
+
+  &:hover {
+    border-color: $blue-primary;
+  }
+
+
+}
+
+.product-badges {
+  display: flex;
+  @include breakpoint(md) {
+    align-items: center;
+  }
+}
+
+.products-slider {
+  .products-slider__inner-slider {
+
+    .swiper {
+
+      .swiper-nav {
+        .swiper-nav-el {
+
+          //top: calc(50% - 50px);
+
+
+          &:first-child {
+            left: 0;
+          }
+
+          &:last-child {
+            right: 0;
+          }
+
+          @include breakpoint(hd) {
+            //top: calc(50% - 50px);
+            &:first-child {
+              left: 16px;
+            }
+            &:last-child {
+              right: 16px;
+            }
+          }
+
+        }
+      }
+
+
+      .swiper-pagination {
+        position: static;
+        display: flex;
+        margin-top: 24px;
+
+        @include breakpoint(lg) {
+          display: none;
+        }
+
+        .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+          background: $gray-1;
+
+          &.swiper-pagination-bullet-active {
+
+            //background: $blue-primary;
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+.compare-products {
+
+  .compare-products__inner {
+    position: relative;
+
+    .compare-products__inner-clear {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: -53px;
+      @include flexAlignCenter;
+      gap: 8px;
+      cursor: pointer;
+
+      @include breakpoint(md) {
+        top: -65px;
+      }
+
+      .clear-img {
+        width: 24px;
+        height: 24px;
+      }
+
+      span {
+        padding-top: 4px;
+      }
+    }
+  }
+
+}
+
+.compare-table {
+
+  .swiper-slide {
+    &:not(:first-child) {
+      .compare-parameter {
+        &::before {
+          position: absolute;
+          content: '';
+          top: -1px;
+          left: -10px;
+          height: 1px;
+          width: 10px;
+          background-color: $gray-1;
+
+          @include breakpoint(lg) {
+            left: -20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .compare {
+    .compare-parameter {
+      border-top: 1px solid $gray-1;
+      padding: 24px 0;
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 6px;
+      position: relative;
+
+
+      .compare-parameter-title {
+        font-size: 14px;
+        color: $gray-1;
+      }
+
+      .compare-parameter-value {
+        @include titleGeneral;
+      }
+
+    }
+
+  }
+}

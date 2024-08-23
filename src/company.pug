@@ -1,0 +1,227 @@
+---
+title: Smartmedix | О компании
+bodyClass: company-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'О компании')
+    section.company-hero
+        .container
+            .company-hero__bg
+                +img('company_hero-lines.svg')
+            .company-hero__inner
+
+                .company-hero__inner-content
+                    .content-title smartmedix
+                    .content-text Официальный дистрибьютор профессионального медицинского оборудования в&nbsp;России. В&nbsp;число партнеров входит более 20&nbsp;мировых производителей
+                    .content-benefits
+                        .benefit Проектирование отделений под ключ
+                        .benefit Комплексное оснащение
+                        .benefit Ремонт оборудования
+                        .benefit Обучение медперсонала
+                        .benefit Участвуем в госзакупках
+
+    section.brands
+        .container
+            .brands__inner
+                .brands__inner-head.section-head
+                    h2.title Бренды
+                    a(href='brands.html').section-head__link.link.link--blue-underlined все бренды
+                .brands__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+                            .swiper-slide
+                                a(href='javascript:void(0)').brand-slide
+                                    .slide-img
+                                        +img('brand-1.png')
+
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+
+
+    section.company-desc
+        .container
+            .company-desc__inner
+                p С 1988 года компания являемся поставщиком медицинского оборудования и продукции медицинского назначения в лечебные учреждения России, Казахстана, Узбекистана, Азербайджана и других стран ближнего зарубежья.
+                p Доставляем оборудование проверенными транспортными компаниями: Деловые Линии, Байкал Сервис, DHL. Обеспечиваем страховку и гарантию на доставку.
+
+    section.company-numbers
+        .container
+            .company-numbers__inner
+                .company-number
+                    .company-number__title 36<sup>+</sup><span>лет</span>
+                    p.company-number-desc работаем на рынке
+                .company-number
+                    .company-number__title 120<sup>+</sup>
+                    p.company-number-desc клиник партнеров
+                .company-number
+                    .company-number__title 50<sup>+</sup>
+                    p.company-number-desc мировых брендов партнеров
+                .company-number
+                    .company-number__title 20<sup>+</sup>
+                    p.company-number-desc направлений медицины
+
+
+
+    section.company-benefits
+        .container
+            .company-benefits__inner
+                .company-benefits__inner-head.section-head
+                    h2.title Наши преимущества
+                .company-benefits__inner-items
+                    .benefits-item.icon-text-item
+                        .item-icon
+                            +img('medal-star.svg')
+                        .item-title Гарантия качества
+                        .item-text От 12 месяцев гарантии на все оборудование
+                    .benefits-item.icon-text-item
+                        .item-icon
+                            +img('like.svg')
+                        .item-title Надежность
+                        .item-text От 12 месяцев гарантии на все оборудование
+                    .benefits-item.icon-text-item
+                        .item-icon
+                            +img('chart-square.svg')
+                        .item-title Выгодные предложения
+                        .item-text От 12 месяцев гарантии на все оборудование
+                    .benefits-item.icon-text-item
+                        .item-icon
+                            +img('math.svg')
+                        .item-title Выгодные предложения
+                        .item-text От 12 месяцев гарантии на все оборудование
+
+    section.company-services.with-slider
+        .container
+            .company-services__inner
+                .company-services__inner-head.section-head
+                    h2.title Наши услуги
+                .company-services__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-1.jpg')
+                                    .general-card__name Проектирование отделений под ключ
+                                    .general-card__text Долгие годы мы работает на рынке высокотехнологичного медицинского оборудования и занимается комплексным оснащением медицинских учреждений. За эти годы мы оснастили лечебные учреждения по всей России.
+                                    .general-card__action
+                                        a(href='javascript:void(0)').btn.btn--blue Подробнее
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-4.jpg')
+                                    .general-card__name Комплексное оснащение
+                                    .general-card__text Предоставляем услугу комплексного сонащения вашего медучреждения, отделения, кабинета.
+                                        |Предоставляем выгодные условия по данной услуге и качественную реализацию.
+                                    .general-card__action
+                                        a(href='javascript:void(0)').btn.btn--blue Подробнее
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-2.jpg')
+                                    .general-card__name Ремонт оборудования
+                                    .general-card__text Специализируемся на всех видах медоборудования  КТ, МРТ, УЗИ, ИВЛ, эндоскопами, рентген-оборудованием и другими видами медицинской техники.
+                                        |Оперативное реагирование и дистанционная диагностика. Приём заявок в день обращения
+                                    .general-card__action
+                                        a(href='javascript:void(0)').btn.btn--blue Подробнее
+                            .swiper-slide
+                                .general-card
+                                    .general-card__img
+                                        +img('service-3.jpg')
+                                    .general-card__name Обучение врачей и инженеров
+                                    .general-card__text Обучение врачей разных специальностей, а также руководителей и административного персонала.
+                                        |Обучение проводят ведущие специалисты своего направления с многолетним опытом работы.
+                                    .general-card__action
+                                        a(href='javascript:void(0)').btn.btn--blue Подробнее
+
+                        .swiper-nav
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--prev
+                                    include assets/images/icon_arrow-left.svg
+                            .swiper-nav-el
+                                .swiper-nav-arrow.arrow--next
+                                    include assets/images/icon_arrow-right.svg
+    section.company-projects
+        .container
+            .company-projects__inner
+                .container
+                    .company-projects__inner-head.section-head
+                        h2.title Более 4 000 реализованных проектов
+                    .company-projects__inner-items
+                        .projects-item.icon-text-item
+                            .item-icon
+                                +img('hospital.svg')
+                            .item-title 5000+
+                            .item-text Частных медицинских центров
+                        .projects-item.icon-text-item
+                            .item-icon
+                                +img('courthouse.svg')
+                            .item-title 1500+
+                            .item-text Государственных лечебных учреждений
+                        .projects-item.icon-text-item
+                            .item-icon
+                                +img('people.svg')
+                            .item-title 1000+
+                            .item-text компаний партнёров
+                    .company-projects__inner-action
+                        a(href='javascript:void(0)').btn.btn--blue-bordered Посмотреть наши реализованные проекты
+    section.company-partners
+        .container
+            .company-partners__inner
+                .company-partners__inner-head.section-head
+                    h2.title Клиники партнеры
+                .company-partners__inner-items
+                    .company-partners-item
+                        .item-image
+                            +img('partner.jpg')
+                        .item-title Наименование партнера
+                        .item-watch.link.link--blue-underlined(data-src="assets/images/thanks-letter.jpg" data-fancybox) Смотреть отзыв
+                    .company-partners-item
+                        .item-image
+                            +img('partner.jpg')
+                        .item-title Наименование партнера
+                        .item-watch.link.link--blue-underlined(data-src="assets/images/thanks-letter.jpg" data-fancybox) Смотреть отзыв
+                    .company-partners-item
+                        .item-image
+                            +img('partner.jpg')
+                        .item-title Наименование партнера
+                        .item-watch.link.link--blue-underlined(data-src="assets/images/thanks-letter.jpg" data-fancybox) Смотреть отзыв
+                    .company-partners-item
+                        .item-image
+                            +img('partner.jpg')
+                        .item-title Наименование партнера
+                        .item-watch.link.link--blue-underlined(data-src="assets/images/thanks-letter.jpg" data-fancybox) Смотреть отзыв
+                    .company-partners-item
+                        .item-image
+                            +img('partner.jpg')
+                        .item-title Наименование партнера
+                        .item-watch.link.link--blue-underlined(data-src="assets/images/thanks-letter.jpg" data-fancybox) Смотреть отзыв

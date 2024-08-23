@@ -1,0 +1,162 @@
+---
+title: Smartmedix | Страница бренда
+bodyClass: brand-inner-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Бренды', ['Бренд Hitachi'])
+    section.company-services.service-page.brand-inner
+        .container
+            .company-services__inner
+
+                .general-card
+                    .general-card__logo
+                        +img('brand-1.png')
+                    .section-head
+                        h1.title Hitachi (Япония)
+
+                    .general-card__img
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +img('service-1.jpg')
+                                .swiper-slide
+                                    +img('service-1.jpg')
+                            include ./components/_swiper-nav
+
+                    .general-card__text
+                        p Hitachi — одна из крупнейших мультинациональных многопрофильных корпораций, одним из основных видов деятельности которой является разработка высокотехнологичного оборудования. Штаб-квартира расположена в Токио (Япония). Hitachi является конгломератом, в ведомости которого находится порядка 1100 компаний.
+                        p Hitachi Healthcare является частью ведущей международной японской группы электроники Hitachi Ltd., в которой работают более 300 000 человек по всему миру. Инновационное медицинское оборудование Hitachi Aloka обеспечивает инновационные диагностические решения для пациентов и клиницистов в широком спектре клинических применений.
+                        h2 Hitachi в России
+                        p С момента создания в 1910 году компания динамично развивалась, осваивая новые направления и рынки. Сейчас в состав финансово-промышленной группы входит более 1000 предприятий, которые производят сотни различных товаров и услуг неизменно высокого качества.
+                        p Подразделение Hitachi Medical Systems отвечает за разработку, производство и реализацию медицинского оборудования. Главное задание предлагает медицинским учреждениям диагностическое оборудование высочайшего класса по функционалу, эффективности и внедрению технологических инноваций.
+
+    section.products-categories
+        .container
+            .products-categories__inner
+                .products-categories__inner-head.section-head
+                    h2.title Категории товаров
+                .products-categories__inner-items
+                    .item
+                        .item-heading
+                            .item-heading__icon
+                                +img('products-categories-1.svg')
+                            span.item-heading__name Лучевая диагностика
+                        .item-list
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+
+
+                    .item
+                        .item-heading
+                            .item-heading__icon
+                                +img('products-categories-1.svg')
+                            span.item-heading__name Хирургия
+                        .item-list
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+
+
+
+                    .item
+                        .item-heading
+                            .item-heading__icon
+                                +img('products-categories-1.svg')
+                            span.item-heading__name Лучевая диагностика
+                        .item-list
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+
+
+                    .item
+                        .item-heading
+                            .item-heading__icon
+                                +img('products-categories-1.svg')
+                            span.item-heading__name Хирургия
+                        .item-list
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+
+
+
+                    .item
+                        .item-heading
+                            .item-heading__icon
+                                +img('products-categories-1.svg')
+                            span.item-heading__name Лучевая диагностика
+                        .item-list
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+
+
+                    .item
+                        .item-heading
+                            .item-heading__icon
+                                +img('products-categories-1.svg')
+                            span.item-heading__name Хирургия
+                        .item-list
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+                            li
+                                a(href='javascript:void(0)').link.link--black Подкатегория
+
+    section.popular-products.products-slider
+        .container
+            .popular-products__inner
+                .products-slider__inner-head.section-head
+                    h2.title Популярные товары
+                .products-slider__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                        include ./components/_swiper-nav

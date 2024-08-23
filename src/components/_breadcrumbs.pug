@@ -1,0 +1,26 @@
+mixin breadcrumbs(title, ...items)
+
+    .breadcrumbs
+        .container
+
+            .breadcrumbs-wrapper
+
+                .breadcrumbs-item
+                    a(href='/') Главная
+
+                each item in items
+
+                    if item == items[items.length - 1]
+                          .breadcrumbs-item
+                              span= item
+
+                    else
+                          .breadcrumbs-item
+                              a(href="#")= item
+
+    if bodyClass != 'main-page' && title
+        .head-title
+
+            .container
+
+                h1.main-title= title

@@ -1,0 +1,6 @@
+mixin sprite(svg_id, stroke, cls)
+    svg(class= cls)
+        use(xlink:href= 'assets/sprites/sprites.svg#' + svg_id)
+
+mixin img(link)
+    img(src= "assets/images/" + link, alt="")

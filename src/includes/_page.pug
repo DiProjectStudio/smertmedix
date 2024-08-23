@@ -1,0 +1,48 @@
+doctype html
+html(lang="ru")
+    include _mixins
+
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title= title || 'Page name'
+
+        // Styles::Start
+        include _loadCss
+        // Styles::End
+
+        // Fonts::Start
+        include _loadFonts
+        // Fonts::End
+
+        // Yandex Map
+        if yandexMap == true
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>")
+
+    body(class= bodyClass ? bodyClass : '')
+
+        #page.page
+
+            // Header::Start
+            block header
+                include _header
+            // Header::End
+
+            // Main::Start
+            main#main
+                block main
+            // Main::End
+
+            // Footer::Start
+            block footer
+                include _footer
+            // Footer::End
+
+        block popups
+            include ../components/_popup
+
+        // Scripts::Start
+        include _loadScripts
+        // Scripts::End

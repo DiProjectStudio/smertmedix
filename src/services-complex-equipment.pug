@@ -1,0 +1,74 @@
+---
+title: Smartmedix | Услуги - Комплексное оснащение
+bodyClass: services-inner-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Наши услуги', 'Комплексное оснащение', 'Комплексное оснащение хирургического отделения', ['Комплексное оснащение палаты реанимации и интенсивной терапии'])
+    section.company-services.service-page
+        .container
+            .company-services__inner
+
+                .general-card
+                    .section-head
+                        h1.title Комплексное оснащение палаты реанимации и интенсивной терапии
+                    .general-card__img
+                        +img('service-4.jpg')
+                    .general-card__text Перечень оборудования для оснащения отделения (палаты) реанимации и интенсивной терапии подготовлен в соответствии с Приказом МЗ России от 15.11.2012 N 919н (ред. от 14.09.2018) "Об утверждении Порядка оказания медицинской помощи взрослому населению по профилю "анестезиология и реаниматология".
+                        |От качества и полноты оснащения медицинского кабинета во многом зависит уровень обслуживания и здоровья самого пациента. Благодаря многолетнему сотрудничеству с ведущими мировыми производителями компания Stormoff обеспечивает
+                        |качественное оснащение вашей клиники под ключ.
+                    .general-card__action
+                        button(type="button" data-src="#popup-request" data-fancybox).btn.btn--blue Оставить заявку
+
+
+
+    - const itemText = 'Аппарат искусственной вентиляции лёгких';
+    section.standards
+        .container
+            .standards-inner
+                .standards-inner__list
+                    ol
+                      each i in [...Array(40).keys()]
+                          li
+                            a(href='javascript:void(0)')= itemText
+
+
+                .standards__inner-more.link-show-more
+                    a(href='javascript:void(0)').link.link--blue-underlined показать весь список
+
+    section.products-list.products-slider
+        .container
+            .products-list__inner
+                .products-slider__inner-head.section-head
+                    h2.title Список товаров
+                .products-slider__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                        include ./components/_swiper-nav
+
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__inner-head.section-head
+                    h2.title СЕО текст
+
+                .seo-block__inner-text
+                    p Чистота помещения уточняется путем количественного анализа частиц, находящихся в воздушной среде. Предельные значения четко фиксируются в соответствующих таблицах. Разработанные классы чистоты учитывают специфику конкретного помещения, его задачи.
+                    p Чистота помещения уточняется путем количественного анализа частиц, находящихся в воздушной среде. Предельные значения четко фиксируются в соответствующих таблицах. Разработанные классы чистоты учитывают специфику конкретного помещения, его задачи.

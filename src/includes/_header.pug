@@ -1,0 +1,389 @@
+block header
+    include ./_mixins
+
+    header#header.header
+        .container
+            .header__inner
+                a(href='/').header__logo.logo
+                    +img('logo.svg')
+
+                .header__contacts
+                    .contacts-item.item--phone
+                        a(href='tel:88008808888').link.link--black 8-800-88-08-888
+                    .contacts-item.item--email
+                        a(href='mailto:servisinstr@gmail.com').link.link--black servisinstr@gmail.com
+
+
+                .header__burger#burger
+                    +img('icon_burger.svg')
+
+                .header__bottom
+                    .header__catalog#catalog-btn
+                        .catalog-btn.btn.btn--blue
+                            span Каталог товаров
+                            .icon
+                                +img('icon_arrow-down-white.svg')
+                    .header__actions
+                        a(href='brands.html').action-item.action--brand
+                            .icon
+                                include ../assets/images/star.svg
+                            span Бренды
+                        a(href='compare-page.html').action-item.action--compare
+                            .icon
+                                include ../assets/images/ranking.svg
+                            span Сравнение
+                    .header__search
+                        .header__search-input
+                            input(type="search" placeholder="")
+                            .icon
+                                include ../assets/images/search.svg
+                .common-wrapper
+                    .wrapper
+                        .header__bg
+                        .header__menu#menu
+
+                            .header__menu-wrapper.header-wrapper
+
+                                .header__menu-actions
+                                    .header__menu-close.menu-action.btn.btn--blue
+                                        include ../assets/images/icon_close-white.svg
+                                .header__menu-content
+                                    nav.header__menu-nav
+                                        ul.menu-nav__list
+
+                                            li.list-item.nav-block
+                                                .nav-block__head
+                                                    span О компании
+                                                    include ../assets/images/icon_arrow-down-blue.svg
+                                                ul.nav-block__list
+                                                    li.nav-list__item
+                                                        a(href='company.html').link.link--black О нас
+                                                    li.nav-list__item
+                                                        a(href='projects.html').link.link--black Наши проекты
+                                            li.list-item
+                                                a(href='category.html').nav-block__head.link.link--black
+                                                    span Каталог
+
+                                            li.list-item.nav-block
+                                                .nav-block__head
+                                                    span Услуги
+                                                    include ../assets/images/icon_arrow-down-blue.svg
+                                                ul.nav-block__list
+                                                    li.nav-list__item
+                                                        a(href='services-complex-departments.html').link.link--black Комплексное оснащение
+                                                    li.nav-list__item
+                                                        a(href='services-education.html').link.link--black Обучение
+                                                    li.nav-list__item
+                                                        a(href='services-design.html').link.link--black Проектирование отделения
+                                                    li.nav-list__item
+                                                        a(href='services-maintenance.html').link.link--black Сервис
+
+                                            li.list-item.nav-block
+                                                .nav-block__head
+                                                    span Информация
+                                                    include ../assets/images/icon_arrow-down-blue.svg
+                                                ul.nav-block__list
+                                                    li.nav-list__item
+                                                        a(href='delivery-payment.html').link.link--black Доставка и оплата
+                                                    li.nav-list__item
+                                                        a(href='gov-purchase.html').link.link--black Участие в госзакупках
+
+                                            li.list-item
+                                                a(href='services-maintenance.html').nav-block__head.link.link--black
+                                                    span Сервис
+                                            li.list-item
+                                                a(href='news.html').nav-block__head.link.link--black
+                                                    span Новости
+                                            li.list-item
+                                                a(href='contacts-1.html').nav-block__head.link.link--black
+                                                    span Контакты
+
+                                    .header__menu-contacts
+                                        .menu-contact
+                                            .icon
+                                                +img('icon_call-stroke.svg')
+                                            a(href='tel:88008808888').link.link--black 8-800-88-08-888
+                                        .menu-contact
+                                            .icon
+                                                +img('icon_sms-stroke.svg')
+                                            a(href='mailto:servisinstr@gmail.com').link.link--black servisinstr@gmail.com
+                        .header__catalog-categories#catalog-categories
+                            .header__categories-wrapper.header-wrapper
+                                .header__menu-actions
+                                    .header__menu-close.menu-action.btn.btn--blue
+                                        include ../assets/images/icon_close-white.svg
+                                .header__menu-content.content-catalog
+                                    nav.header__menu-nav.menu-nav__categories
+                                        ul.menu-nav__list
+                                            li.list-item(data-category="catalog-cat-1")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-1.svg
+                                                    span Анестезиология и реанимация
+                                            li.list-item(data-category="catalog-cat-2")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-2.svg
+                                                    span Неонатология
+                                            li.list-item(data-category="catalog-cat-3")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-3.svg
+                                                    span Акушерство и гинекология
+                                            li.list-item(data-category="catalog-cat-4")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-4.svg
+                                                    span УЗИ
+                                            li.list-item(data-category="catalog-cat-5")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-5.svg
+                                                    span Лучевая диагностика
+                                            li.list-item(data-category="catalog-cat-6")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-6.svg
+                                                    span Хирургия
+
+                                            li.list-item(data-category="catalog-cat-7")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-7.svg
+                                                    span Эндоскопия
+                                            li.list-item(data-category="catalog-cat-8")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-8.svg
+                                                    span Стерилизация и дезинфекция
+                                            li.list-item(data-category="catalog-cat-9")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-9.svg
+                                                    span ЛОР оборудование
+                                            li.list-item(data-category="catalog-cat-10")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-10.svg
+                                                    span Офтальмология
+                                            li.list-item(data-category="catalog-cat-11")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-11.svg
+                                                    span Физиотерапия и реабилитация
+                                            li.list-item(data-category="catalog-cat-12")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-12.svg
+                                                    span Функциональная диагностика
+                                            li.list-item(data-category="catalog-cat-13")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-13.svg
+                                                    span Скорая помощь
+
+                                            li.list-item(data-category="catalog-cat-14")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-14.svg
+                                                    span Медицинские консоли
+                                            li.list-item(data-category="catalog-cat-15")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-15.svg
+                                                    span Газоснабжение
+                                            li.list-item(data-category="catalog-cat-16")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-16.svg
+                                                    span Косметология
+                                            li.list-item(data-category="catalog-cat-17")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-17.svg
+                                                    span Ветеринария
+                                            li.list-item(data-category="catalog-cat-18")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-18.svg
+                                                    span Запчасти и расходные материалы
+                                            li.list-item(data-category="catalog-cat-19")
+                                                a(href='javascript:void(0)').link.link--black
+                                                    include ../assets/images/cat-19.svg
+                                                    span Программное обеспечение для клиник
+
+                        .header__catalog-products#catalog-products
+                            .header__products-wrapper.header-wrapper
+                                .header__menu-actions
+                                    .header__menu-back.menu-action.btn.btn--blue#products-back
+                                        include ../assets/images/icon_arrow-left.svg
+                                    .header__menu-close.menu-action.btn.btn--blue
+                                        include ../assets/images/icon_close-white.svg
+                                .header__menu-content.content-products
+                                    nav.header__menu-nav.menu-nav__products
+                                        .header__menu-title(data-category="catalog-cat-1")
+                                            a(href='javascript:void(0)').link.link--blue Анестезиология и реанимация
+                                        .header__menu-title(data-category="catalog-cat-2")
+                                            a(href='javascript:void(0)').link.link--blue Неонатология
+                                        .header__menu-title(data-category="catalog-cat-3")
+                                            a(href='javascript:void(0)').link.link--blue Акушерство и гинекология
+                                        .header__menu-title(data-category="catalog-cat-4")
+                                            a(href='javascript:void(0)').link.link--blue УЗИ
+                                        .header__menu-title(data-category="catalog-cat-5")
+                                            a(href='javascript:void(0)').link.link--blue Лучевая диагностика
+                                        .header__menu-title(data-category="catalog-cat-6")
+                                            a(href='javascript:void(0)').link.link--blue Хирургия
+                                        .header__menu-title(data-category="catalog-cat-7")
+                                            a(href='javascript:void(0)').link.link--blue Эндоскопия
+                                        .header__menu-title(data-category="catalog-cat-8")
+                                            a(href='javascript:void(0)').link.link--blue Стерилизация и дезинфекция
+                                        .header__menu-title(data-category="catalog-cat-9")
+                                            a(href='javascript:void(0)').link.link--blue ЛОР оборудование
+                                        .header__menu-title(data-category="catalog-cat-10")
+                                            a(href='javascript:void(0)').link.link--blue Офтальмология
+                                        .header__menu-title(data-category="catalog-cat-11")
+                                            a(href='javascript:void(0)').link.link--blue Физиотерапия и реабилитация
+                                        .header__menu-title(data-category="catalog-cat-12")
+                                            a(href='javascript:void(0)').link.link--blue Функциональная диагностика
+                                        .header__menu-title(data-category="catalog-cat-13")
+                                            a(href='javascript:void(0)').link.link--blue Скорая помощь
+                                        .header__menu-title(data-category="catalog-cat-14")
+                                            a(href='javascript:void(0)').link.link--blue Медицинские консоли
+                                        .header__menu-title(data-category="catalog-cat-15")
+                                            a(href='javascript:void(0)').link.link--blue Газоснабжение
+                                        .header__menu-title(data-category="catalog-cat-16")
+                                            a(href='javascript:void(0)').link.link--blue Косметология
+                                        .header__menu-title(data-category="catalog-cat-17")
+                                            a(href='javascript:void(0)').link.link--blue Ветеринария
+                                        .header__menu-title(data-category="catalog-cat-18")
+                                            a(href='javascript:void(0)').link.link--blue Запчасти и расходные материалы
+                                        .header__menu-title(data-category="catalog-cat-19")
+                                            a(href='javascript:void(0)').link.link--blue Программное обеспечение для клиник
+
+                                        ul.menu-nav__list(data-category="catalog-cat-1")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Аппараты ИВЛ
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Лучистое тепло
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Инкубаторы
+                                        ul.menu-nav__list(data-category="catalog-cat-2")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-3")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+                                        ul.menu-nav__list(data-category="catalog-cat-4")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Аппараты ИВЛ
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Лучистое тепло
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Инкубаторы
+                                        ul.menu-nav__list(data-category="catalog-cat-5")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-6")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+                                        ul.menu-nav__list(data-category="catalog-cat-7")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Аппараты ИВЛ
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Лучистое тепло
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Инкубаторы
+                                        ul.menu-nav__list(data-category="catalog-cat-8")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-9")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+                                        ul.menu-nav__list(data-category="catalog-cat-10")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Аппараты ИВЛ
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Лучистое тепло
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Инкубаторы
+                                        ul.menu-nav__list(data-category="catalog-cat-11")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-12")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-13")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+                                        ul.menu-nav__list(data-category="catalog-cat-14")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Аппараты ИВЛ
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Лучистое тепло
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Инкубаторы
+                                        ul.menu-nav__list(data-category="catalog-cat-15")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-16")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+                                        ul.menu-nav__list(data-category="catalog-cat-17")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Аппараты ИВЛ
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Лучистое тепло
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Инкубаторы
+                                        ul.menu-nav__list(data-category="catalog-cat-18")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+                                        ul.menu-nav__list(data-category="catalog-cat-19")
+                                            li.list-item
+                                                a(href='javascript:void(0)').link.link--black
+                                                    span Подкатегория
+
+

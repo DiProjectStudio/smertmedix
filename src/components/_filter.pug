@@ -1,0 +1,65 @@
+.filter-content
+    .filter-close.btn.btn--blue
+        include ../assets/images/icon_close-white.svg
+    .filter-content-head
+        include ../assets/images/icon_filter.svg
+        span Фильтр
+    .filter-items
+
+        .filter-item
+            .filter-head
+                span Акции
+                .icon
+                    include ../assets/images/icon_arrow-right.svg
+            .filter-options
+                .filter-option.checkbox-style
+                        input#promos(type="checkbox" checked)
+                        label(for="promos") Акции
+
+        .filter-item
+            .filter-head
+                span Производитель
+                .icon
+                    include ../assets/images/icon_arrow-right.svg
+            .filter-options
+                .filter-option.checkbox-style
+                        input#filter1(type="checkbox")
+                        label(for="filter1") Все производители
+                .filter-option.checkbox-style
+                        input#filter2(type="checkbox")
+                        label(for="filter2") Amelie<span>(9)</span>
+                .filter-option.checkbox-style
+                        input#filter3(type="checkbox")
+                        label(for="filter3") Biomedicinos Technika<span>(23)</span>
+                .filter-option.checkbox-style
+                        input#filter4(type="checkbox")
+                        label(for="filter4") Chison<span>(10)</span>
+                .filter-option.checkbox-style
+                        input#filter5(type="checkbox")
+                        label(for="filter5") Edan<span>(12)</span>
+                .filter-option.checkbox-style
+                        input#filter6(type="checkbox")
+                        label(for="filter6") Hitachi<span>(10 000)</span>
+                .filter-option.checkbox-style
+                        input#filter7(type="checkbox")
+                        label(for="filter7") Все производители
+                .filter-option.checkbox-style
+                        input#filter8(type="checkbox")
+                        label(for="filter8") Amelie<span>(9)</span>
+                .filter-option.checkbox-style
+                        input#filter9(type="checkbox")
+                        label(for="filter9") Biomedicinos Technika<span>(23)</span>
+                .filter-option.checkbox-style
+                        input#filter10(type="checkbox")
+                        label(for="filter10") Chison<span>(10)</span>
+                .filter-option.checkbox-style
+                        input#filter11(type="checkbox")
+                        label(for="filter11") Edan<span>(12)</span>
+                .filter-option.checkbox-style
+                        input#filter12(type="checkbox")
+                        label(for="filter12") Hitachi<span>(10 000)</span>
+
+
+    .filter-actions
+        .link.link--blue-underlined#resetFilter
+            span Сбросить все

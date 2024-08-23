@@ -1,0 +1,49 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #292929;
+    --color-blue-light-1: #F5F8FF;
+    --color-blue-light-2: #CCDCFA;
+    --color-blue-primary: #014FE6;
+    --color-blue-primary-opacity: rgba(1, 79, 230, 0.6);
+    --color-blue-secondary: #00268D;
+    --color-blue-secondary-opacity: rgba(0, 38, 141, 0.6);
+    --color-blue-hover: #0036A0;
+    --color-gray-1: #B1B1B1;
+    --color-gray-2: #D9D9D9;
+    --color-gray-3: #F3F3F3;
+    --color-gray-4: #F2F2F2;
+    --color-gray-disabled: #C7C7C7;
+    --color-gray-bg: rgba(65, 65, 65, 0.35);
+    --color-red: #FF0000;
+    --color-green: #17A600;
+    --color-orange: #FF7A00;
+
+    --gradient-1: linear-gradient(90deg, #014FE6 34.9%, #D400F7 71.4%, #EA1246 100%);
+    --gradient-2: linear-gradient(72deg, #E40D78 23.18%, #D400F7 46.44%, #004DE3 69.23%, #4A3AFF);
+
+    --transition-style: all .3s ease;
+}
+
+$white: var(--color-white);
+$black: var(--color-black);
+$blue-light-1: var(--color-blue-light-1);
+$blue-light-2: var(--color-blue-light-2);
+$blue-primary: var(--color-blue-primary);
+$blue-primary-opacity: var(--color-blue-primary-opacity);
+$blue-secondary: var(--color-blue-secondary);
+$blue-secondary-opacity: var(--color-blue-secondary-opacity);
+$blue-hover: var(--color-blue-hover);
+$gray-1: var(--color-gray-1);
+$gray-2: var(--color-gray-2);
+$gray-3: var(--color-gray-3);
+$gray-4: var(--color-gray-4);
+$gray-disabled: var(--color-gray-disabled);
+$gray-bg: var(--color-gray-bg);
+$red: var(--color-red);
+$green: var(--color-green);
+$orange: var(--color-orange);
+
+$gradient-1: var(--gradient-1);
+$gradient-2: var(--gradient-2);
+
+$transition-style: var(--transition-style)

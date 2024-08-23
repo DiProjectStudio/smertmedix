@@ -1,0 +1,222 @@
+.catalog {
+  .catalog__inner {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 24px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: calc(100% / 20 * 4) 1fr;
+      gap: 32px 75px;
+      justify-content: space-between;
+    }
+    @include breakpoint(hd) {
+      column-gap: 100px;
+    }
+
+  }
+
+  .catalog__inner-filter {
+
+    &.filter--main {
+      grid-column: 1/2;
+      grid-row: 1/3;
+
+      @include breakpoint(lg) {
+        .filter-button {
+          display: none;
+        }
+      }
+    }
+
+    &.filter--secondary {
+
+      .countries {
+        padding-top: 16px;
+        border-top: 1px solid $gray-1;
+        display: grid;
+        grid-template-columns: 55% auto;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px 10px;
+
+        @include breakpoint(md) {
+          grid-template-columns: 75% auto;
+        }
+        @include breakpoint(lg) {
+          grid-template-columns: calc(100% / 15 * 11) auto;
+        }
+
+        &.active {
+          .countries-more {
+            grid-column: span 2;
+            grid-row: 3/4;
+
+            img {
+              transform: rotate(-180deg);
+              width: 16px;
+              height: 16px;
+            }
+          }
+
+          .countries-items {
+            grid-column: span 2;
+            max-height: 1000px;
+            transition: .7s ease-out;
+          }
+
+
+        }
+
+        .countries-head {
+          @include titleGeneral;
+          grid-column: span 2;
+
+        }
+
+        .countries-more {
+          color: $blue-primary;
+          @include flexAlignCenter;
+          gap: 8px;
+          cursor: pointer;
+          transition: $transition-style;
+
+          img {
+            width: 16px;
+            height: 16px;
+            transition: $transition-style;
+          }
+        }
+
+        .countries-items {
+          @include flexAlignCenter;
+          gap: 10px;
+          flex-wrap: wrap;
+          max-height: 37px;
+          overflow: hidden;
+          position: relative;
+          z-index: 0;
+          transition: .7s ease-out;
+
+          .country {
+            padding: 8px 12px;
+            @include titleGeneral;
+            border: 1px solid $gray-1;
+            border-radius: 10px;
+            color: $gray-1;
+            cursor: pointer;
+            height: 37px;
+          }
+        }
+      }
+
+      .chosen-filters {
+        margin-top: 16px;
+        @include flexAlignCenter;
+        gap: 12px;
+
+
+        @include breakpointMax(md) {
+          white-space: nowrap;
+          overflow: auto;
+        }
+        @include breakpoint(md) {
+flex-wrap: wrap;
+        }
+
+        .chosen-filter {
+          //position: ;
+          @include flexAlignCenter;
+          gap: 6px;
+          padding: 6px 12px;
+          @include titleGeneral;
+          border-radius: 10px;
+          cursor: pointer;
+
+          &:not(&.filter-action) {
+            background-color: $blue-light-1;
+            color: $blue-primary;
+
+            &::after {
+              content: url("../images/icon_close-blue.svg");
+
+            }
+          }
+
+          &.filter-action {
+            background-color: $gray-3;
+
+            &::after {
+              content: url("../images/icon_close-gray.svg");
+
+            }
+          }
+
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .catalog__inner-products {
+
+    @include breakpoint(lg) {
+      grid-column: 2/3;
+      grid-row: 2 / 3;
+    }
+
+    .products-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+
+      @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 10px;
+      }
+      @include breakpoint(lg) {
+        gap: 20px;
+      }
+      @include breakpoint(xl) {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px 20px;
+      }
+    }
+
+  }
+
+  .catalog__inner-article {
+    margin-top: 16px;
+
+    @include breakpoint(md) {
+      margin-top: 32px;
+    }
+    @include breakpoint(lg) {
+      margin-top: 64px;
+      grid-column: 2/3;
+    }
+
+    h2 + p {
+      margin-top: 24px;
+    }
+
+    p {
+      @include textLimit(1);
+    }
+
+    p + a {
+      margin-top: 12px;
+    }
+
+    a {
+      padding: 12px 0;
+    }
+
+
+  }
+
+}

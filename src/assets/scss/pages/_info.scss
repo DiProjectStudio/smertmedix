@@ -1,0 +1,112 @@
+// ИНФО + НОВОСТИ, СТАТЬИ и ПР
+
+.platforms {
+  .platforms__inner-items {
+    display: grid;
+    gap: 12px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
+    @include breakpoint(hd) {
+      gap: 20px;
+    }
+
+
+    .platform {
+      display: grid;
+      gap: 10px;
+      line-height: 120%;
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid $gray-1;
+
+      .platform_full-name {
+        text-transform: uppercase;
+
+        @include breakpoint(md) {
+          font-size: 24px;
+        }
+      }
+
+      .platform_short-name-label {
+        color: $gray-1;
+        font-size: 14px;
+
+      }
+
+      .platform_short-name {
+        @include breakpoint(md) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.info {
+  .info__inner-items {
+    display: grid;
+    gap: 20px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 10px;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px 20px;
+    }
+    @include breakpoint(hd) {
+      gap: 24px 20px;
+    }
+  }
+}
+
+.company-services {
+  &.news-page {
+
+    .company-services__inner {
+      @include breakpoint(lg) {
+      align-items: flex-start;
+      }
+
+      .general-card{
+        @include breakpoint(hd) {
+          gap: 32px;
+        }
+      }
+
+      .general-card__img {
+        @include breakpoint(hd) {
+          height: 100%;
+        }
+      }
+    }
+
+    .general-card__text {
+      p ~ p {
+        margin-top: 16px;
+
+        @include breakpoint(md) {
+          margin-top: 24px;
+        }
+
+        @include breakpoint(hd) {
+          margin-top: 12px;
+        }
+      }
+
+
+    }
+  }
+
+  .general-card__action {
+    svg {
+      width: 24px;
+      height: 24px;
+      transform: rotate(90deg);
+    }
+  }
+}
