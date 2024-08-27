@@ -20,7 +20,7 @@ mixin breadcrumbs(title, ...items)
 
     if bodyClass != 'main-page' && title
         .head-title
-
             .container
-
                 h1.main-title= title
+                if bodyClass = 'search-result-page'
+                    .search-result-products Найдено товаров: <span>26<span>

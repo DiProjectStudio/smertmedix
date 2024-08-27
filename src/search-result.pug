@@ -1,0 +1,52 @@
+---
+title: Smartmedix | Страница каталога
+bodyClass: search-result-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Результаты поиска по “инкубатор”', 'Результаты поиска по “инкубатор”')
+    section.catalog.search-result
+        .container
+            .catalog__inner
+                .catalog__inner-filter.filter--main
+                    .filter-button.btn.btn--blue
+                        include assets/images/icon_filter.svg
+                        span Фильтр
+                include ./components/_filter
+                .catalog__inner-filter.filter--secondary
+                    .countries
+                        .countries-head Страна-производитель:
+                        .countries-items
+                            .country Россия
+                            .country Китай
+                            .country США
+                            .country Германия
+                            .country Швейцария
+                            .country Россия
+                            .country Китай
+                            .country США
+                            .country Германия
+                            .country Швейцария
+
+                        .countries-more#showCountries
+                            span Показать еще
+                            +img('icon_arrow-down-blue.svg')
+
+                    .chosen-filters
+                        .chosen-filter#chosenManufacturer Производитель:<span>Amelie</span>
+                        .chosen-filter#chosenCountry Страна-производитель:<span>Швейцария</span>
+                        .chosen-filter.filter-action#resetFilter Сбросить фильтры
+                .catalog__inner-products
+
+                    .products-items
+                        include ./components/_product
+                        include ./components/_product-with-badge
+                        include ./components/_product
+                        include ./components/_product
+                        include ./components/_product-with-badge
+                        include ./components/_product-with-badge
+                        include ./components/_product
+                    include ./components/_pagination

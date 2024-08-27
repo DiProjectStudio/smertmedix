@@ -6,6 +6,7 @@
 
     @include breakpoint(lg) {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto) 1fr;
       gap: 24px 20px;
     }
 
@@ -62,6 +63,7 @@
             .gallery-thumbs-image {
               padding: 20px 0;
               height: 116px;
+              cursor: pointer;
 
               img {
                 object-fit: contain;

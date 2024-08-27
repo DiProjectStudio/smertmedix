@@ -20,12 +20,25 @@
           @include flexCenterCenter;
           @include titleGeneral;
           border-radius: 6px;
+          border: 1px solid transparent;
           background-color: $gray-2;
           cursor: pointer;
+          transition: $transition-style;
           @include breakpoint(lg) {
             width: 49px;
             height: 49px;
             font-size: 20px;
+          }
+
+          &.active {
+            background-color: $blue-primary;
+            color: $white;
+          }
+
+          &:hover {
+            background-color: $white;
+            color: $blue-primary;
+            border: 1px solid $blue-primary;
           }
         }
       }

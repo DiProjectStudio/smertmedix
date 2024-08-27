@@ -287,6 +287,21 @@
       grid-template-columns: 100%;
       gap: 6px;
       position: relative;
+      min-height: 179px;
+
+      @include breakpoint(md) {
+      min-height: 139px;
+      }
+      @include breakpoint(lg) {
+      min-height: 139px;
+      }
+      @include breakpointCustom(1440px) {
+      min-height: 118px;
+      }
+
+      @include breakpoint(hd) {
+      min-height: 139px;
+      }
 
 
       .compare-parameter-title {

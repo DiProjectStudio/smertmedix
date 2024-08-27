@@ -1,0 +1,20 @@
+---
+title: Smartmedix | 404
+bodyClass: not-found-page
+---
+
+extends includes/_page
+
+block main
+
+    section.page404.section-content.padding-main
+        .container
+            .page404-wrapper
+                .page404__image
+                    +img('layer-4.svg')
+                .page404__title 404
+                .page404__text
+                    p.subtitle Мы не можем найти нужную вам страницу
+                    p.description Запрашиваемой страницы не существует. Возможно она была удалена или в запросе был указан неверный адрес страницы.
+                .page404__actions
+                    a(href="index.html").btn.btn--blue На главную
