@@ -27,9 +27,12 @@ $(document).ready(function () {
     if ($('.common-wrapper > .active').length > 0) {
       if ($(window).width() >= 1200) {
         $('.header__bg').hide();
-      } else {
-        $('.header__bg').show();
       }
+    } else {
+      $('.header__bg').css('display', 'block'); // Сначала показываем элемент
+      setTimeout(() => {
+        $('.header__bg').css('opacity', '1'); // Затем изменяем opacity
+      }, 10);
     }
   }
 

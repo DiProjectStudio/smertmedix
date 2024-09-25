@@ -98,6 +98,17 @@ $(document).ready(function () {
   });
 
 
+  $('.catalog__inner-article .link').on('click', function() {
+    let $parent = $(this).closest('.catalog__inner-article');
+    $parent.toggleClass('expanded');
+    if ($parent.hasClass('expanded')) {
+      $(this).text('скрыть');
+    } else {
+      $(this).text('подробнее');
+    }
+  });
+
+
   // ПЕРЕМЕЩЕНИЕ ИЗОБРАЖЕНИЯ В .company-services
   let $generalCard = $('.company-services.service-page .general-card');
   let $generalCardImg = $('.company-services.service-page .general-card__img');

@@ -1,14 +1,15 @@
 .page404 {
-  padding: 144px 0 164px;
+  //padding: 144px 0 164px;
+  padding: 100px 0;
 
   @include breakpoint(md) {
-    padding: 126px 0 142px;
+    //padding: 126px 0 142px;
   }
   @include breakpoint(lg) {
-    padding: 212px 0 234px;
+    //padding: 212px 0 234px;
   }
   @include breakpoint(hd) {
-    padding: 353px 0 370px;
+    //padding: 353px 0 370px;
   }
 
   .page404-wrapper {

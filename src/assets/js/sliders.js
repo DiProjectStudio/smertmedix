@@ -17,6 +17,10 @@ $(document).ready(function () {
       nextEl: '.hero .swiper-nav-arrow.arrow--next',
       prevEl: '.hero .swiper-nav-arrow.arrow--prev',
     },
+    on: {
+      slideChange: function() { updateNavArrows(this); },
+      init: function() { updateNavArrows(this); },
+    }
   });
 
   const promosSlider = new Swiper(".promos .swiper", {
@@ -45,7 +49,12 @@ $(document).ready(function () {
         slidesPerView: 3.3,
         spaceBetween: 20,
       }
-    }
+    },
+
+    on: {
+      slideChange: function() { updateNavArrows(this); },
+      init: function() { updateNavArrows(this); },
+    },
   });
 
   const brandsSlider = new Swiper(".brands .swiper", {
@@ -74,7 +83,11 @@ $(document).ready(function () {
         slidesPerView: 5.5,
         spaceBetween: 20,
       }
-    }
+    },
+    on: {
+      slideChange: function() { updateNavArrows(this); },
+      init: function() { updateNavArrows(this); },
+    },
   });
 
 
@@ -108,6 +121,10 @@ $(document).ready(function () {
         nextEl: `.slider-${index} .swiper-nav-arrow.arrow--next`,
         prevEl: `.slider-${index} .swiper-nav-arrow.arrow--prev`,
       },
+      on: {
+        slideChange: function() { updateNavArrows(this); },
+        init: function() { updateNavArrows(this); },
+      },
     });
   });
 
@@ -131,6 +148,11 @@ $(document).ready(function () {
             slidesPerView: 2.2,
             spaceBetween: 10,
           }
+        },
+
+        on: {
+          slideChange: function() { updateNavArrows(this); },
+          init: function() { updateNavArrows(this); },
         },
       });
     } else if ($(window).width() >= 1200) {
@@ -173,6 +195,11 @@ $(document).ready(function () {
     navigation: {
       nextEl: `.company-services .swiper-nav-arrow.arrow--next`,
       prevEl: `.company-services .swiper-nav-arrow.arrow--prev`,
+    },
+
+    on: {
+      slideChange: function() { updateNavArrows(this); },
+      init: function() { updateNavArrows(this); },
     },
   })
 
@@ -237,6 +264,14 @@ $(document).ready(function () {
         draggable: false,
       }
     },
+    on: {
+      slideChange: function () {
+        updateNavArrows(this, true);
+      },
+      init: function () {
+        updateNavArrows(this, true);
+      },
+    }
   }
 
   const productsSlider = new Swiper('.products-slider:not(.compare-table) .swiper', {
@@ -309,6 +344,14 @@ $(document).ready(function () {
     },
     thumbs: {
       swiper: galleryThumbs
+    },
+    on: {
+      slideChange: function () {
+        updateNavArrows(this, true);
+      },
+      init: function () {
+        updateNavArrows(this, true);
+      },
     }
   })
 
@@ -323,8 +366,8 @@ $(document).ready(function () {
       $prevArrow.css('display', 'none');
       $nextArrow.css('display', 'none');
     } else {
-      $prevArrow.css('display', 'block');
-      $nextArrow.css('display', 'block');
+      $prevArrow.css('display', 'flex');
+      $nextArrow.css('display', 'flex');
     }
 
     if (checkEdges) {

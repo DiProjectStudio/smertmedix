@@ -1,0 +1,48 @@
+.promos-all {
+  .promos-all__inner {
+    .promos-all__items {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 100%;
+
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px 10px;
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px 20px;
+      }
+      @include breakpoint(hd) {
+        gap: 24px 20px;
+      }
+    }
+  }
+}
+
+// PROMO DETAIL
+
+.company-services.promo-page .company-services__inner .general-card {
+  @include breakpoint(xl) {
+    gap: 32px;
+  }
+
+  .section-head {
+    grid-template-columns: 100%;
+    gap: 16px;
+    .promo-date {
+      font-size: 20px;
+
+
+      span {
+        color: $blue-primary;
+      }
+    }
+  }
+
+  .general-card__text {
+    p~p {
+      margin-top: 16px;
+    }
+  }
+}

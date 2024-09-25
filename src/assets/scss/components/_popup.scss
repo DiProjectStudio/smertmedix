@@ -6,9 +6,11 @@
   gap: 24px;
   @include breakpoint(md) {
     padding: 24px 48px;
+    width: 704px;
   }
   @include breakpoint(lg) {
     padding: 48px;
+    width: 884px;
   }
 
   &.popup-success {
@@ -44,58 +46,83 @@
     }
   }
 
-  form {
-    width: 100%;
-    order: 3;
-
-    @include breakpoint(md) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .form-row {
+  &.popup-request-form {
+    form {
+      width: 100%;
+      order: 3;
 
       @include breakpoint(md) {
-        &:nth-child(2) {
-          grid-column: 1/2;
-        }
-        &:nth-child(3) {
-          grid-column: 1/2;
-        }
-        &:nth-child(4) {
-          grid-column: 2/3;
-          grid-row: 1/3;
-          height: 100%;
-        }
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      &.form-agreement {
+      .form-row {
+
+        @include breakpoint(md) {
+          &:not(:nth-of-type(5)) {
+            //height: 45px;
+          }
+
+          &:nth-of-type(2) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+          }
+          &:nth-of-type(3) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+          }
+          &:nth-of-type(4) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+          }
+          &:nth-of-type(5) {
+            grid-column: 2/3;
+            grid-row: 1/3;
+            height: 100%;
+          }
+          &:nth-of-type(6) {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            //height: 100%;
+          }
+
+          textarea {
+            height: 102px;
+          }
+        }
+
+        &.form-agreement {
+          @include breakpoint(md) {
+            grid-column: span 2;
+          }
+
+          p {
+            @include breakpoint(md) {
+              width: 100%;
+              display: flex;
+              gap: 5px;
+            }
+          }
+        }
+
+
+      }
+
+      .form-action {
         @include breakpoint(md) {
           grid-column: span 2;
         }
 
-        p {
-          @include breakpoint(md) {
-            width: 100%;
-            display: flex;
-            gap: 5px;
-          }
+
+        .btn {
+          height: 45px;
+          margin: 0 auto;
         }
+
       }
-    }
-
-    .form-action {
-      @include breakpoint(md) {
-        grid-column: span 2;
-      }
-
-
-      .btn {
-        height: 45px;
-        margin: 0 auto;
-      }
-
     }
   }
+
+
 }
 
 .fancybox__content {

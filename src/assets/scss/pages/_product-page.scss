@@ -24,6 +24,7 @@
 
       @include breakpoint(lg) {
         grid-column: 2/3;
+        width: 95%;
       }
     }
 
@@ -127,13 +128,14 @@
 
         .product-image {
           height: 100%;
+          overflow: hidden;
 
           .image-wrapper {
             height: 100%;
             padding: 18px 0 53px;
 
             @include breakpoint(md) {
-              padding: 39px 0 85px;
+              padding: 39px 0 65px;
             }
           }
         }
@@ -155,6 +157,7 @@
       }
       @include breakpoint(lg) {
         grid-template-columns: 100%;
+        grid-template-rows: repeat(8, auto) 1fr;
         grid-column: 2/3;
         grid-row: 2/4;
       }
@@ -201,6 +204,7 @@
         @include breakpoint(lg) {
           grid-column: unset;
           grid-row: 1/2;
+          justify-content: unset;
         }
 
         .info-action {
@@ -209,6 +213,10 @@
           gap: 8px;
           padding: 12px 16px;
           cursor: pointer;
+
+          @include breakpoint(lg) {
+          width: fit-content;
+          }
 
           .icon {
             width: 24px;
@@ -402,7 +410,7 @@
           &.expanded {
             .content__inner {
               mask-image: unset;
-              max-height: 1000px;
+              max-height: 10000px;
             }
           }
 

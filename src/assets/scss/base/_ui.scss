@@ -214,10 +214,6 @@ input[type='checkbox'] {
   }
 
 }
-input[type="search"] {
-
-}
-
 
 form {
 
@@ -760,16 +756,23 @@ h3 {
       @include breakpoint(lg) {
         display: flex;
       }
+
+      .swiper-nav-arrow {
+        @include flexCenterCenter;
+      }
     }
   }
 }
 
 .swiper-pagination {
-  background-color: transparent;
+  //background-color: transparent;
   height: 4px;
   width: fit-content;
   @include flexCenterCenter;
   --swiper-pagination-bottom: 24px;
+  //--swiper-pagination-color: $blue-light-1;
+  //--swiper-pagination-bullet-inactive-color: 1;
+
 
   @include breakpointMax(lg) {
     display: none;
@@ -781,6 +784,8 @@ h3 {
   --swiper-pagination-bullet-border-radius: 50%;
   --swiper-pagination-bullet-height: 4px;
   --swiper-pagination-bullet-width: 4px;
+  //--swiper-pagination-color: $blue-light-1;
+  //--swiper-pagination-bullet-inactive-opacity: 1;
   background: $blue-light-1;
   opacity: 1;
   transition: $transition-style;
@@ -788,15 +793,18 @@ h3 {
 
   &:hover {
     background: $white;
+    //--swiper-pagination-color: $white;
 
     .swiper-pagination-bullet-active {
       background: $blue-primary-opacity;
+      //--swiper-pagination-color: $blue-primary-opacity;
     }
   }
 
   &.swiper-pagination-bullet-active {
 
     background: $blue-primary;
+    //--swiper-pagination-color: $blue-primary;
     --swiper-pagination-bullet-width: 9px;
     --swiper-pagination-bullet-border-radius: 3px;
   }
@@ -835,8 +843,5 @@ h3 {
     background-color: $blue-primary;
     border-radius: 50%;
     user-select: none;
-
-
-
   }
 }

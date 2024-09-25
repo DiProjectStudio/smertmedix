@@ -115,7 +115,7 @@
 
         &.active {
 
-          .icon{
+          .icon {
             transform: rotate(-180deg);
           }
         }
@@ -131,7 +131,8 @@
         }
 
         @include breakpoint(lg) {
-          display: none;
+          //display: none;
+          grid-column: 3/4;
         }
 
         .action-item {
@@ -207,7 +208,9 @@
         @include breakpoint(md) {
           grid-column: 2/3;
           grid-row: 1/2;
-
+        }
+        @include breakpoint(lg) {
+          grid-column: 2/3;
         }
 
         .header__search-input {
@@ -255,6 +258,8 @@
     .header-wrapper {
       left: 0;
     }
+
+
   }
 
 }
@@ -353,6 +358,10 @@
           }
         }
 
+        img {
+          width: 24px;
+          height: 24px;
+        }
 
 
         &.active {
@@ -361,9 +370,6 @@
             color: $blue-primary;
           }
 
-          svg path {
-            stroke: $blue-primary;
-          }
 
           &::after {
 
@@ -372,18 +378,6 @@
             }
 
           }
-        }
-
-        &:hover {
-          svg path {
-            stroke: $blue-primary;
-          }
-        }
-
-        svg {
-          width: 24px;
-          height: 24px;
-          transition: $transition-style;
         }
 
         span {
@@ -845,9 +839,9 @@
 // ANIMATIONS
 @keyframes fadeOut {
   from {
-    opacity: 0
+    opacity: 0;
   }
   to {
-    opacity: 1
+    opacity: 1;
   }
 }

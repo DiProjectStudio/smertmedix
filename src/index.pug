@@ -37,6 +37,8 @@ block main
             .promos__inner
                 .promos__inner-head.section-head
                     h2.title Акции
+                    a(href='promos.html').section-head__link.link.link--blue-underlined все акции
+
                 .promos__inner-slider
                     .swiper
                         .swiper-wrapper
@@ -194,26 +196,26 @@ block main
                     .swiper
                         .swiper-wrapper
                             .swiper-slide
-                                .general-card
+                                a(href='services-design.html').general-card
                                     .general-card__img
                                         +img('service-1.jpg')
                                     .general-card__name Проектирование отделений под ключ
                                     .general-card__action
-                                        a(href='services-design.html').btn.btn--blue Подробнее
+                                        button(type="button").btn.btn--blue Подробнее
                             .swiper-slide
-                                .general-card
+                                a(href='services-education.html').general-card
                                     .general-card__img
                                         +img('service-2.jpg')
                                     .general-card__name Обучение врачей и инженеров
                                     .general-card__action
-                                        a(href='services-education.html').btn.btn--blue Подробнее
+                                        button(type="button").btn.btn--blue Подробнее
                             .swiper-slide
-                                .general-card
+                                a(href='services-maintenance.html').general-card
                                     .general-card__img
                                         +img('service-3.jpg')
                                     .general-card__name Услуги сервиса
                                     .general-card__action
-                                        a(href='services-maintenance.html').btn.btn--blue Подробнее
+                                        button(type="button").btn.btn--blue Подробнее
 
     section.info.info-slides
         .container

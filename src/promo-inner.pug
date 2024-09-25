@@ -1,0 +1,49 @@
+---
+title: Smartmedix | Акция детальная
+bodyClass: promo-inner-page
+---
+
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('','Акции',['Наименование акции'])
+
+    section.company-services.service-page.promo-page
+        .container
+            .company-services__inner
+
+                .general-card
+                    .section-head
+                        h1.title Наименование акции
+                        .promo-date Дата проведения: с <span id="promoFrom">24.09</span> по <span id="promoTo">31.12</span>
+                    .general-card__img
+                        +img('service-4.jpg')
+                    .general-card__text
+                        p Чистыми помещениями называют те из них, в которых содержание пыли или патогенных микроорганизмов в воздушной среде поддерживается в определенном диапазоне, регламентированном соответствующими нормативами.
+                        p Чистыми помещениями называют те из них, в которых содержание пыли или патогенных микроорганизмов в воздушной среде поддерживается в определенном диапазоне, регламентированном соответствующими нормативами.
+
+    section.promo-products.products-slider
+        .container
+            .promo-products__inner
+                .products-slider__inner-head.section-head
+                    h2.title Акционные товары
+                .products-slider__inner-slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product
+                            .swiper-slide
+                                include ./components/_product-with-badge
+                            .swiper-slide
+                                include ./components/_product
+                        include ./components/_swiper-nav

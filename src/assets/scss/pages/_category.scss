@@ -1,25 +1,38 @@
 .catalog {
+
+  &:not(.search-result) {
+    .catalog__inner {
+      @include breakpoint(lg) {
+        grid-template-columns: calc(100% / 20 * 4) 1fr;
+        gap: 32px 75px;
+        justify-content: space-between;
+      }
+      @include breakpoint(hd) {
+        column-gap: 100px;
+      }
+
+      .catalog__inner-products {
+        grid-row: 3/4;
+
+        @include breakpoint(lg) {
+          grid-column: 2/3;
+          grid-row: 2 / 3;
+        }
+      }
+    }
+  }
   .catalog__inner {
     display: grid;
     grid-template-columns: 100%;
     gap: 24px;
-
-    @include breakpoint(lg) {
-      grid-template-columns: calc(100% / 20 * 4) 1fr;
-      gap: 32px 75px;
-      justify-content: space-between;
-    }
-    @include breakpoint(hd) {
-      column-gap: 100px;
-    }
-
   }
 
   .catalog__inner-filter {
 
     &.filter--main {
       grid-column: 1/2;
-      grid-row: 1/3;
+      grid-row: 1/2;
+      //grid-row: 1/3;
 
       @include breakpoint(lg) {
         .filter-button {
@@ -44,6 +57,7 @@
         }
         @include breakpoint(lg) {
           grid-template-columns: calc(100% / 15 * 11) auto;
+          grid-row: 2/3;
         }
 
         &.active {
@@ -164,11 +178,6 @@ flex-wrap: wrap;
 
   .catalog__inner-products {
 
-    @include breakpoint(lg) {
-      grid-column: 2/3;
-      grid-row: 2 / 3;
-    }
-
     .products-items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -191,6 +200,7 @@ flex-wrap: wrap;
 
   .catalog__inner-article {
     margin-top: 16px;
+    grid-row: 4/5;
 
     @include breakpoint(md) {
       margin-top: 32px;
@@ -200,19 +210,27 @@ flex-wrap: wrap;
       grid-column: 2/3;
     }
 
+    &.expanded {
+      p {
+        max-height: 1000px;
+      }
+    }
+
     h2 + p {
       margin-top: 24px;
     }
 
     p {
-      @include textLimit(1);
+      max-height: 20px;
+      overflow: hidden;
+      transition: $transition-style;
     }
 
     p + a {
       margin-top: 12px;
     }
 
-    a {
+    .link {
       padding: 12px 0;
     }
 
