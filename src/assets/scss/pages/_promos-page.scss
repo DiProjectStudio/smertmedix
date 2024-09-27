@@ -22,27 +22,37 @@
 
 // PROMO DETAIL
 
-.company-services.promo-page .company-services__inner .general-card {
-  @include breakpoint(xl) {
-    gap: 32px;
-  }
+.company-services.service-page.promo-page .company-services__inner {
 
-  .section-head {
-    grid-template-columns: 100%;
-    gap: 16px;
-    .promo-date {
-      font-size: 20px;
+  .general-card {
+    @include breakpoint(xl) {
+      gap: 32px;
+    }
+
+    .section-head {
+      grid-template-columns: 100%;
+      gap: 16px;
+      .promo-date {
+        font-size: 20px;
 
 
-      span {
-        color: $blue-primary;
+        span {
+          color: $blue-primary;
+        }
       }
     }
-  }
 
-  .general-card__text {
-    p~p {
-      margin-top: 16px;
+    .general-card__text {
+      p~p {
+        margin-top: 16px;
+      }
+    }
+
+
+  }
+  .general-card__img {
+    img {
+      object-fit: contain;
     }
   }
 }

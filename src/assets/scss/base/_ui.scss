@@ -357,9 +357,13 @@ a {
   margin-bottom: 24px;
 
   .title {
+    @include titleGeneral;
+    font-size: 24px;
     width: 95%;
     @include breakpoint(md) {
       width: 80%;
+      font-size: 28px;
+
     }
   }
 
@@ -712,7 +716,7 @@ a {
   line-height: 120%;
 }
 
-h1, h2, h4 {
+h1, h2, h3, h4, h5, h6 {
   @include titleGeneral;
 }
 
@@ -740,8 +744,19 @@ h4 {
   }
 }
 
-h3 {
+h5 {
+  font-size: 18px;
+  @include breakpoint(md) {
+    font-size: 20px;
+  }
+}
+h6 {
+  font-size: 16px;
   font-weight: 400;
+}
+
+h3 {
+  //font-weight: 400;
   font-size: 24px;
 }
 

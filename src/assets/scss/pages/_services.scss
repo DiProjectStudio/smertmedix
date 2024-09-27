@@ -483,7 +483,13 @@
 
     .section-head {
       .title {
-        font-weight: 400;
+        //@include titleGeneral;
+        //font-weight: 400;
+
+        font-size: 24px;
+
+
+
       }
     }
 

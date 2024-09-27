@@ -285,14 +285,6 @@ $(document).ready(function () {
     navigation: {
       nextEl: `.products-slider .swiper-nav-arrow.arrow--next`,
       prevEl: `.products-slider .swiper-nav-arrow.arrow--prev`,
-    },
-    on: {
-      slideChange: function () {
-        compareTableSlider.slideToLoop(this.realIndex);
-      },
-      transitionEnd: function () {
-        compareTableSlider.slideToLoop(this.realIndex);
-      }
     }
   })
 
